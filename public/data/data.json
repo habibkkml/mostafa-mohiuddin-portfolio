@@ -40,7 +40,8 @@
                 "Managing",
                 "Director"
             ],
-            "homeImage": "/src/assets/img/director_kkml.jpg"
+            "homeImage": "/src/assets/img/director_kkml.jpg",
+            "company": "Khoshroz Kitab Mahal Limited"
         }
     }
 }

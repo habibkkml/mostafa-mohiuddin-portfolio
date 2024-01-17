@@ -1,87 +1,53 @@
 import { Link } from 'react-router-dom';
 import { Icon } from './Icon';
+import useDataFetching from '../Hooks/useDataFetching';
 
 const Header = () => {
+    const { data, loading, error } = useDataFetching('/public/data/data.json');
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error fetching data: {error.message}</div>;
+    }
+
+    const { headerContent } = data;
+
     return (
         <header className="header">
             <div className="wrapper">
                 <div className="header__inner">
                     <div className="header__logo">
-                        <Link to={'/'}>
-                            <img src={"../../src/assets/img/mm-logo-300.png"} alt="" />
+                        <Link to={headerContent.url}>
+                            <img src={headerContent.logo} alt={headerContent.logoAlt} />
                         </Link>
                     </div>
                     <nav className="header__nav">
                         <ul className="header__nav--list list-unstyled">
-                            <li>
-                                <Link to={'/'}>Home</Link>
-                            </li>
-                            <li>
-                                <Link to={'/about'}>About</Link>
-                            </li>
-                            <li>
-                                <Link to={'/history'}>History</Link>
-                            </li>
+                            {headerContent.nav.map((navItem, index) => (
+                                <li key={index}>
+                                    <Link to={navItem.url}>{navItem.name}</Link>
+                                </li>
+                            ))}
                         </ul>
                     </nav>
                     <div className="header__social">
                         <ul className="header__social--icons list-unstyled">
-                            <li>
-                                <a href="#" target='_blank'>
-                                    <Icon iconName={'fi-brands-facebook'} />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target='_blank'>
-                                    <Icon iconName={'fi-brands-instagram'} />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target='_blank'>
-                                    <Icon iconName={'fi-brands-youtube'} />
-                                </a>
-                            </li>
+                            {headerContent.social.map((socialItem, index) => (
+                                <li key={index}>
+                                    <Link to={socialItem.url} target='_blank' rel="noreferrer">
+                                        <Icon iconName={socialItem.icon} />
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
             </div>
-            {/* <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="header__inner">
-                            <div className="header__logo">
-                                <a href="#">
-                                    <img src={"../../src/assets/img/mm-logo-300.png"} alt="" />
-                                </a>
-                            </div>
-                            <nav className="header__nav" id="menuItem">
-                                <ul className="header__nav--menu">
-                                    <li>
-                                        <Link to='/'>Home</Link>
-                                    </li>
-                                    <li>
-                                        <Link to='/about'>About</Link>
-                                    </li>
-                                    <li><a href="#">Portfolio</a></li>
-                                    <li><a href="#">FAQ</a></li>
-
-                                    <li><a href="#">Shop</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </nav>
-                            <div className="header__trigger">
-                                <button id="menuTriggerBtn">
-                                    <i className="fi fi-rr-menu-burger"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-
         </header>
-
-    )
+    );
 }
 
-export default Header
+export default Header;

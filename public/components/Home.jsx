@@ -14,9 +14,9 @@ const Home = () => {
     const { homeContent } = data.home;
     return (
         <section className="home">
-            <div className="container">
-                <div className="row justify-content-end">
-                    <div className="col-md-7">
+            <div className="wrapper">
+                <div className="row ">
+                    <div className="col-md-12">
                         <div className="home__title">
                             <h1>{homeContent.title}</h1>
                         </div>
@@ -27,6 +27,12 @@ const Home = () => {
                                 ))}
 
                             </h2>
+                        </div>
+                        <div className="home__company">
+                            {/* <marquee direction="left">
+                                <h3>{homeContent.company} {homeContent.company} {homeContent.company}</h3>
+                            </marquee> */}
+                            <h3>{homeContent.company}</h3>
                         </div>
                     </div>
                 </div>
