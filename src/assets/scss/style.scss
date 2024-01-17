@@ -1,0 +1,242 @@
+@import "@flaticon/flaticon-uicons/css/all/all.css";
+@import "bootstrap/scss/bootstrap.scss";
+@import "variables", "mixins";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: $body-font;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: $heading-font;
+  font-size: 46px;
+}
+
+%nav_common {
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: $white;
+      font-size: 20px;
+    }
+  }
+}
+%before_after {
+  position: absolute;
+  content: "";
+}
+.wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 1.6vw;
+  padding-bottom: 1.6vw;
+  padding-left: 5.2vw;
+  padding-right: 5.2vw;
+  pointer-events: auto;
+}
+
+.header {
+  background-color: darken($color: $dark, $amount: 100);
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    a {
+      display: block;
+      width: 90px;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &__nav {
+    ul {
+      @extend %nav_common;
+      li {
+        a {
+          position: relative;
+          transition: 0.3s ease-in-out;
+          &::after {
+            @extend %before_after;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $white;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover {
+            color: $logo-color;
+            &::after {
+              width: 80%;
+              background-color: $logo-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__social {
+    ul {
+      @extend %nav_common;
+    }
+  }
+}
+/*
+.header {
+  background-color: lighten($color: $logo-color, $amount: 34);
+  border-bottom: 1px solid lighten($color: $dark, $amount: 60);
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 700;
+  transition: all 0.3s cubic-bezier(0.63, -0.72, 0, 1.52);
+  padding: 10px 0;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobile {
+      display: block;
+      padding: 10px 0;
+    }
+  }
+  &__logo {
+    a {
+      text-decoration: none;
+      width: 90px;
+      display: block;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &__nav {
+    @include mobile {
+      overflow: hidden;
+      max-height: 0;
+      transition: 0.3s;
+    }
+    &.menu-active {
+      display: block;
+      max-height: 100vh;
+      overflow-y: auto;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &--menu {
+      display: flex;
+      align-items: center;
+      @include mobile {
+        display: block;
+      }
+      li {
+        padding: 20px 0;
+        z-index: 1;
+        position: relative;
+        @include mobile {
+          padding: 0;
+          padding-top: 10px;
+        }
+        &:not(&:last-child) {
+          margin-right: 15px;
+        }
+        a {
+          display: block;
+          color: $dark;
+          text-decoration: none;
+          @include mobile {
+            display: inline-block;
+            position: relative;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            bottom: 15px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $dark;
+            transition: 0.3s all ease-in-out;
+            @include mobile {
+              bottom: 25px;
+            }
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            top: 15px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: $dark;
+            transition: 0.3s all ease-in-out;
+            @include mobile {
+              top: 25px;
+            }
+          }
+          &:hover {
+            &::before,
+            &::after {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__trigger {
+    display: none;
+    @include mobile {
+      display: block;
+      position: fixed;
+      right: 20px;
+      top: 15px;
+      z-index: 701;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: $dark;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+      i {
+        display: flex;
+      }
+    }
+  }
+}
+*/
+// Home Style
+.home {
+}
