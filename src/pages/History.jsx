@@ -27,6 +27,7 @@ const About = () => {
                             <p>Khoshroz Kitab Mahal and NDC Auto brick</p>
                         </div>
                         <div className="history__description--main">
+                            <h4>Message from the Founder</h4>
                             <p>Mohiuddin Ahmad’s message as the founder of KKML is truly inspiring as it demonstrates his passion for creating a better future for the people of Bangladesh. His efforts to create employment opportunities and promote environmental sustainability are commendable. Despite facing adversity, he was able to establish multiple successful companies, which is a testament to his determination and entrepreneurial spirit. One of his notable achievements is the establishment of a pollution-free brick factory in partnership with organizations like UNDP and ADB, showing how businesses can have a positive impact on the environment.</p>
                             <p>The founder expresses his gratitude towards ADB and Janata Bank for investing in the project, as well as UNDP for their technical support. This highlights the importance of collaboration in achieving success.</p>
                             <p>
