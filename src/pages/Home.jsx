@@ -19,7 +19,7 @@ const Home = () => {
         <>
             <section className="home">
                 <div className="wrapper">
-                    <div className="row ">
+                    <div className="row">
                         <div className="col-md-12">
                             <div className="home__title">
                                 <h1>{homeContent.title}</h1>
@@ -40,7 +40,7 @@ const Home = () => {
                                 <p>An experienced researcher, inventor, and author, with a track record at leading R&D teams, writing winning grant proposals, whilst being passionate about deep-tech innovation that leads to impact.</p>
                             </div>
                             <button className='primary__btn'>
-                                <Link to={'/about'}> About</Link >
+                                <Link to={'/history'}> History</Link>
                             </button>
                         </div>
                     </div>
