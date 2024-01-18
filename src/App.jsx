@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Use `Routes` instead of `Switch`
-import Header from '../public/components/Header';
-import Home from '../public/components/Home';
-import About from '../public/components/About';
-import History from '../public/components/History';
-import { Notfound } from '../public/components/Notfound';
+import Header from './components/Header';
+import Home from './pages/Home';
+import History from './pages/History';
+import { Notfound } from './pages/Notfound';
+import Footer from './components/Footer';
 
 import './App.scss'
+import Contact from './components/Contact';
 
 function App() {
 
@@ -13,14 +14,15 @@ function App() {
     <Router>
       <>
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/history" element={<History />} />
-          <Route path="*" element={<Notfound />} />
-          {/* Add more routes for other components */}
-        </Routes>
-
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/history" element={<History />} />
+            <Route path="*" element={<Notfound />} />
+          </Routes>
+        </main>
+        {/* <Contact /> */}
+        <Footer />
       </>
     </Router>
 

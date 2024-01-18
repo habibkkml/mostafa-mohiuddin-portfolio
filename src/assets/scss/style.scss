@@ -1,10 +1,15 @@
 @import "@flaticon/flaticon-uicons/css/all/all.css";
 @import "bootstrap/scss/bootstrap.scss";
 @import "variables", "mixins";
+@import "loading";
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+::selection {
+  background-color: rgba(0, 128, 128, 0.531);
 }
 html,
 body {
@@ -32,12 +37,93 @@ h1 {
       text-decoration: none;
       color: $white;
       font-size: 20px;
+      @include medium-desktop {
+        font-size: 16px;
+      }
     }
   }
 }
 %before_after {
   position: absolute;
   content: "";
+}
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+.primary__btn {
+  position: relative;
+  background-color: transparent;
+  color: $white;
+  border: 2px solid $logo-color;
+  outline: none;
+  text-transform: capitalize;
+  font-size: 20px;
+  &::before {
+    @extend %before_after;
+    top: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    z-index: 1;
+    background-image: linear-gradient(to right, #ff4e7a, $white, $logo-color);
+    transition: 0.3s all ease;
+  }
+  &::after {
+    @extend %before_after;
+    bottom: -2px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    z-index: 1;
+    background-image: linear-gradient(to right, #ff4e7a, $white, $logo-color);
+    transition: 0.3s all ease;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    padding: 10px 40px;
+    font-size: 20px;
+    text-decoration: none;
+    color: $logo-color;
+    transition: 0.3s all ease-in-out;
+    &::before {
+      @extend %before_after;
+      left: -2px;
+      width: 2px;
+      height: 0;
+      bottom: 0;
+      background-image: linear-gradient(to bottom, #ff4e7a, $white, $logo-color);
+      transition: 0.3s all ease;
+    }
+    &::after {
+      @extend %before_after;
+      right: -2px;
+      width: 2px;
+      height: 0;
+      top: 0;
+      background-image: linear-gradient(to top, #ff4e7a, $white, $logo-color);
+      transition: 0.3s all ease;
+    }
+  }
+  &:hover {
+    &::before,
+    &:after {
+      width: 100%;
+    }
+    a {
+      color: $white;
+
+      &::before,
+      &:after {
+        height: 100%;
+      }
+    }
+  }
+}
+main {
+  min-height: calc(100vh - 1.6vw);
 }
 .wrapper {
   position: relative;
@@ -52,16 +138,41 @@ h1 {
 }
 
 .header {
-  background-color: darken($color: $dark, $amount: 100);
+  background-color: $background;
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__mobile {
+    &--nav {
+      background-color: transparent;
+      color: $white;
+      border: 0;
+      outline: none;
+      font-size: 20px;
+      &:focus {
+        outline: none;
+      }
+    }
   }
   &__logo {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
     a {
       display: block;
       width: 90px;
+      @include medium-desktop {
+        width: 70px;
+      }
+      @include small-desktop {
+        width: 60px;
+      }
       img {
         width: 100%;
         object-fit: contain;
@@ -69,9 +180,15 @@ h1 {
     }
   }
   &__nav {
+    @include tablet {
+      display: none;
+    }
     ul {
       @extend %nav_common;
       li {
+        @include tablet {
+          display: block;
+        }
         a {
           position: relative;
           transition: 0.3s ease-in-out;
@@ -99,152 +216,32 @@ h1 {
     }
   }
   &__social {
+    @include tablet {
+      display: none;
+    }
     ul {
       @extend %nav_common;
     }
   }
 }
-/*
-.header {
-  background-color: lighten($color: $logo-color, $amount: 34);
-  border-bottom: 1px solid lighten($color: $dark, $amount: 60);
-  position: relative;
-  top: 0;
-  width: 100%;
-  z-index: 700;
-  transition: all 0.3s cubic-bezier(0.63, -0.72, 0, 1.52);
-  padding: 10px 0;
-  &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @include mobile {
-      display: block;
-      padding: 10px 0;
-    }
-  }
-  &__logo {
-    a {
-      text-decoration: none;
-      width: 90px;
-      display: block;
-
-      img {
-        width: 100%;
-        object-fit: contain;
-      }
-    }
-  }
-  &__nav {
-    @include mobile {
-      overflow: hidden;
-      max-height: 0;
-      transition: 0.3s;
-    }
-    &.menu-active {
-      display: block;
-      max-height: 100vh;
-      overflow-y: auto;
-    }
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    &--menu {
-      display: flex;
-      align-items: center;
-      @include mobile {
-        display: block;
-      }
-      li {
-        padding: 20px 0;
-        z-index: 1;
-        position: relative;
-        @include mobile {
-          padding: 0;
-          padding-top: 10px;
-        }
-        &:not(&:last-child) {
-          margin-right: 15px;
-        }
-        a {
-          display: block;
-          color: $dark;
-          text-decoration: none;
-          @include mobile {
-            display: inline-block;
-            position: relative;
-          }
-          &::before {
-            position: absolute;
-            content: "";
-            bottom: 15px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: $dark;
-            transition: 0.3s all ease-in-out;
-            @include mobile {
-              bottom: 25px;
-            }
-          }
-          &::after {
-            position: absolute;
-            content: "";
-            top: 15px;
-            right: 0;
-            width: 0;
-            height: 2px;
-            background-color: $dark;
-            transition: 0.3s all ease-in-out;
-            @include mobile {
-              top: 25px;
-            }
-          }
-          &:hover {
-            &::before,
-            &::after {
-              width: 50%;
-            }
-          }
-        }
-      }
-    }
-  }
-  &__trigger {
-    display: none;
-    @include mobile {
-      display: block;
-      position: fixed;
-      right: 20px;
-      top: 15px;
-      z-index: 701;
-    }
-    button {
-      background-color: transparent;
-      border: none;
-      outline: none;
-      color: $dark;
-      cursor: pointer;
-      &:focus {
-        outline: none;
-      }
-      i {
-        display: flex;
-      }
-    }
-  }
-}
-*/
 // Home Style
 .home {
-  background-color: darken($color: $dark, $amount: 100);
+  background-color: $background;
   position: relative;
   z-index: 1;
   height: 100%;
   min-height: calc(100vh - 145px);
   padding: 90px 0;
+  display: flex;
+  align-items: center;
+  @include medium-desktop {
+    padding: 60px 0;
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 0;
+  }
   &__image {
     position: absolute;
     right: 0;
@@ -252,6 +249,16 @@ h1 {
     width: 40%;
     height: 100%;
     z-index: -1;
+    @include medium-desktop {
+      width: 50%;
+    }
+    @include small-desktop {
+      width: 40%;
+    }
+    @include tablet {
+      width: 100%;
+      position: relative;
+    }
     img {
       width: 100%;
       height: 100%;
@@ -260,14 +267,20 @@ h1 {
   }
   &__title {
     text-align: left;
+    @include tablet {
+      text-align: center;
+      padding-top: 60px;
+    }
     h1 {
       color: $white;
       text-transform: uppercase;
       font-weight: 400;
-      font-size: 60px;
+      font-size: 3.2vw;
       margin-bottom: 15px;
       position: relative;
       display: inline-block;
+      margin-bottom: 20px;
+
       &::before {
         @extend %before_after;
         bottom: -10px;
@@ -280,34 +293,155 @@ h1 {
     }
   }
   &__designation {
+    @include tablet {
+      text-align: center;
+    }
     h2 {
-      font-size: 190px;
+      font-size: 10vw;
+      font-family: $heading-font;
       color: $white;
-      font-weight: 900;
+      font-weight: 400;
       letter-spacing: -15px;
       line-height: 0.8;
       text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 10px;
+      @include medium-desktop {
+        letter-spacing: -10px;
+      }
+      @include small-desktop {
+        letter-spacing: -5px;
+      }
       span {
         display: block;
-        &:nth-child(1) {
-          margin-left: 25px;
+        margin-left: 160px;
+        @include medium-desktop {
+          margin-left: 85px;
         }
-        &:nth-child(2) {
-          margin-left: 160px;
+        @include small-desktop {
+          margin-left: 75px;
         }
-        &:nth-child(3) {
+        @include tablet {
+          margin: 0;
+        }
+        &:nth-child(odd) {
           margin-left: 25px;
+          @include tablet {
+            margin-left: 0;
+          }
         }
       }
     }
   }
   &__company {
+    @include tablet {
+      text-align: center;
+    }
     h3 {
       font-family: $heading-font;
-      font-size: 45px;
+      font-size: 2.9vw;
       color: $logo-color;
       margin-bottom: 0;
-      margin-top: 30px;
+      margin-top: 10px;
+      display: inline-block;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        background-color: $white;
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+        bottom: -5px;
+      }
     }
+  }
+  &__details {
+    padding-top: 20px;
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+}
+
+// About
+
+.about {
+  background-color: $whiteBg;
+  position: relative;
+  .swiper-wrapper {
+    align-items: center;
+  }
+  .swiper-slide {
+    height: 120px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    &--right {
+      flex-basis: 60%;
+      width: 60%;
+      padding: 2.5vw 6vw;
+    }
+  }
+  &__title {
+    position: relative;
+    margin: 3vw 0;
+    font-size: 3.5vw;
+    font-weight: 900;
+    font-family: $heading-font;
+    color: $dark;
+    &::before {
+      @extend %before_after;
+      bottom: -30px;
+      width: 100%;
+      height: 3px;
+      border-radius: 5px;
+      background-color: $logo-color;
+    }
+  }
+  p {
+    font-size: 20px;
+    color: $dark;
+  }
+  &__image {
+    width: 40%;
+    @include medium-desktop {
+      width: 50%;
+    }
+    @include small-desktop {
+      width: 40%;
+    }
+    @include tablet {
+      width: 100%;
+      position: relative;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// Hi
+// Footer
+.footer {
+  text-align: center;
+  font-size: 20px;
+  background-color: $background;
+  color: $white;
+  padding: 20px 0;
+  p {
+    margin: 0;
   }
 }
