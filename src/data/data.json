@@ -1,6 +1,6 @@
 {
     "headerContent": {
-        "logo": "/assets/img/mm-logo-300.png",
+        "logo": "https://i.ibb.co/bBZ6FQM/mm-logo-300.png",
         "logoAlt": "Khoshroz Kitab Mahal - Mostafa Jafir Mohiuddin",
         "url": "/",
         "nav": [
@@ -36,7 +36,7 @@
                 "Managing",
                 "Director"
             ],
-            "homeImage": "/assets/img/DMD_photo1.png",
+            "homeImage": "https://i.ibb.co/VJPXkBg/DMD-photo1.png",
             "company": "Khoshroz Kitab Mahal Limited",
             "desc": "It was through Mostafa’s work at his grandfather’s publishing company during the summers that he discovered his love for the paper industry and assumed a full-time job as Deputy Managing Director. Mostafa says he owes most of his business acumen to his grandfather, who gave him his foundational training. This knowledge, paired with his love of nature, inspired Mostafa to open a business with his brother in 2021: Magura Agriculture Park Limited. This organic agriculture farm allows a one-stop solution for people to reach farmers and fresh products with ease."
         }
@@ -44,29 +44,29 @@
     "brands": {
         "brandLogos": [
             {
-                "logo": "/assets/img/kkml-logo.png",
+                "logo": "https://i.ibb.co/FBy33DD/kkml-logo.png",
                 "alt": "Khoshroz Kitab Mahal",
                 "url": "https://www.khoshrozltd.com/"
             },
             {
-                "logo": "/assets/img/mapl-logo.png",
+                "logo": "https://i.ibb.co/cwZtCF1/mapl-logo.png",
                 "alt": "Magura Agriculture Park Limited",
                 "url": "/"
             },
             {
-                "logo": "/assets/img/mg-logo.png",
+                "logo": "https://i.ibb.co/v4C9Hy0/mg-logo.png",
                 "alt": "Magura Group Limited",
                 "url": "https://maguragroup.com.bd/"
             },
             {
-                "logo": "/assets/img/logo-ndcl.png",
+                "logo": "https://i.ibb.co/N656bDd/logo-ndcl.png",
                 "alt": "National Development Company Limited",
                 "url": "https://www.ndcautobrick.com/"
             }
         ]
     },
     "about": {
-        "aboutImage": "/assets/img/DMD_KKML.png",
+        "aboutImage": "https://i.ibb.co/yX0dW02/DMD-KKML.png",
         "aboutTitle": "Biography",
         "biography": [
             "Born in Bangladesh and raised in the United States, Mostafa Mohiuddin is a businessman best known for his work in the publication sector. Though he was raised by his parents, Mostafa was most influenced by his grandfather, Mohiuddin Ahmed who was the Chairman and Founder of the publication house Khoshroz Kitab Mahal. Ahmed also founded NDC Auto Brick in an effort to produce pollution-free bricks in Bangladesh.",
@@ -79,12 +79,12 @@
         {
             "name": "Mostafa Mohiuddin",
             "designation": "Honorable Chairman",
-            "image": "/assets/img/Chairman-sir-photos.png"
+            "image": "/src/assets/img/Chairman-sir-photos.png"
         },
         {
             "name": "Mostafa Mohiuddin",
             "designation": "Honorable Chairman",
-            "image": "/assets/img/Chairman-sir-photos.png"
+            "image": "/src/assets/img/Chairman-sir-photos.png"
         }
     ],
     "footer": {
