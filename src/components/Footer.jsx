@@ -2,7 +2,7 @@ import useDataFetching from '../Hooks/useDataFetching';
 import Loading from './Loading';
 
 const Footer = () => {
-    const { data, loading, error } = useDataFetching('/src/data/data.json');
+    const { data, loading, error } = useDataFetching('data.json');
 
     if (loading) {
         return <Loading />;

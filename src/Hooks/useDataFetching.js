@@ -1,25 +1,21 @@
 import { useState, useEffect } from "react";
+import data from "../data/data.json"; // Adjust the path as needed
 
-const useDataFetching = (url) => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+const useDataFetching = () => {
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        setError(error);
-      } finally {
+    try {
+      setLoading(true);
+      setTimeout(() => {
         setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [url]);
+      }, 500);
+    } catch (error) {
+      setError(error);
+      setLoading(false);
+    }
+  }, []);
 
   return { data, loading, error };
 };

@@ -4,7 +4,7 @@ import useDataFetching from '../Hooks/useDataFetching';
 import Loading from './Loading';
 
 const Header = () => {
-    const { data, loading, error } = useDataFetching('/src/data/data.json');
+    const { data, loading, error } = useDataFetching('data.json');
 
     if (loading) {
         return <Loading />;

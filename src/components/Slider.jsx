@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Loading from './Loading';
 
 const Slider = () => {
-    const { data, loading, error } = useDataFetching('/src/data/data.json');
+    const { data, loading, error } = useDataFetching('data.json');
 
     if (loading) {
         return <Loading />;
