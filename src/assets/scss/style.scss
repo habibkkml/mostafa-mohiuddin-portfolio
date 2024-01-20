@@ -222,6 +222,7 @@ main {
     @include tablet {
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
     a {
       display: block;
@@ -528,37 +529,64 @@ main {
     align-items: stretch;
     &:nth-child(even) {
       flex-direction: row-reverse;
+      @include small-desktop {
+        flex-direction: column;
+      }
+    }
+    @include small-desktop {
+      flex-direction: column;
     }
   }
   &__image {
     width: 40%;
+    @include medium-desktop {
+      width: 50%;
+    }
+    @include small-desktop {
+      width: 100%;
+      overflow: hidden;
+    }
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @include small-desktop {
+      }
     }
   }
   &__description {
     width: 60%;
     align-self: center;
     padding: 2vw 5.2vw;
+    @include medium-desktop {
+      width: 50%;
+      padding: 2vw 4vw;
+    }
+    @include small-desktop {
+      width: 100%;
+    }
     &--top {
       padding: 2vw 0;
       h3 {
-        font-size: 3vw;
+        @extend %title_font;
         font-weight: 700;
         margin-bottom: 0;
         color: $logo-color;
       }
       h2 {
         font-family: $heading-font;
-        font-size: 5vw;
+        font-size: 4vw;
         font-weight: 900;
         letter-spacing: -5px;
         line-height: 1.5;
+        @include medium-desktop {
+          letter-spacing: -2px;
+          line-height: 0.8;
+          padding: 5px 0;
+        }
       }
       p {
-        font-size: 3vw;
+        @extend %title_font;
         color: $logo-color;
         font-weight: 600;
         margin-bottom: 0;
@@ -567,12 +595,15 @@ main {
     }
     &--main {
       h4 {
-        font-size: 25px;
+        @extend %title_font;
         font-weight: 600;
         color: $dark;
       }
       p {
         font-size: 20px;
+        @include medium-desktop {
+          font-size: 16px;
+        }
       }
     }
   }
