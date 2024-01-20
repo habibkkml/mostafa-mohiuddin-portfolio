@@ -1,23 +1,27 @@
 import { useState, useEffect } from "react";
-import data from "../data/data.json"; // Adjust the path as needed
+import data from "../data/data.json";
+
+let globalLoading = false;
 
 const useDataFetching = () => {
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [dataFetched, setDataFetched] = useState(false);
 
   useEffect(() => {
     try {
-      setLoading(true);
-      setTimeout(() => {
-        setLoading(false);
-      }, 500);
+      if (!dataFetched && !globalLoading) {
+        globalLoading = true;
+        setTimeout(() => {
+          globalLoading = false;
+          setDataFetched(true);
+        }, 500);
+      }
     } catch (error) {
       setError(error);
-      setLoading(false);
     }
-  }, []);
+  }, [dataFetched]);
 
-  return { data, loading, error };
+  return { data, loading: globalLoading, error };
 };
 
 export default useDataFetching;

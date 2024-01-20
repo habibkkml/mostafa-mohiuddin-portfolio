@@ -15,7 +15,7 @@ const Slider = () => {
         return <div>Error fetching data: {error.message}</div>;
     }
 
-    const { brands } = data;
+    const { brands } = data || {};
     return (
         <Swiper
             spaceBetween={0}

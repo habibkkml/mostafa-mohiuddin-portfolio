@@ -12,7 +12,7 @@ const Footer = () => {
         return <div>Error fetching data: {error.message}</div>;
     }
 
-    const { footer } = data;
+    const { footer } = data || {};
 
     return (
         <footer className="footer">

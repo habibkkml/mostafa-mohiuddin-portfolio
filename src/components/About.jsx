@@ -13,7 +13,7 @@ const About = () => {
         return <div>Error fetching data: {error.message}</div>;
     }
 
-    const { about } = data;
+    const { about } = data || {};
     return (
         <>
 

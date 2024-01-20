@@ -15,6 +15,7 @@ const Home = () => {
     }
 
     const { homeContent } = data.home;
+
     return (
         <>
             <section className="home">
