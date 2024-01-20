@@ -492,6 +492,7 @@ main {
     @include mobile {
       margin-top: 5px;
       font-size: 4vw;
+      text-align: justify;
     }
   }
   &__image {
