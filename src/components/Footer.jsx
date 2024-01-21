@@ -16,13 +16,7 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <div className="wrapper">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <p dangerouslySetInnerHTML={{ __html: footer.copyright }} />
-                    </div>
-                </div>
-            </div>
+            <p dangerouslySetInnerHTML={{ __html: footer.copyright }} />
         </footer>
     );
 }

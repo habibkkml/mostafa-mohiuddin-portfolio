@@ -646,5 +646,9 @@ main {
   padding: 20px 0;
   p {
     margin: 0;
+    font-size: 20px;
+    @include medium-desktop {
+      font-size: 16px;
+    }
   }
 }
