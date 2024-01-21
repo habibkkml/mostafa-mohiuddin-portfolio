@@ -19,6 +19,14 @@ const Home = () => {
 
     return (
         <>
+            <SEO
+                title={homeContent.title}
+                description={homeContent.desc}
+                name={homeContent.title}
+                type="article"
+                image={homeContent.homeImage}
+                socialLinks={data.headerContent.social}
+            />
             <section className="home">
                 <div className="wrapper">
                     <div className="row">
