@@ -202,8 +202,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     @include tablet {
       display: block;
+      z-index: 4;
     }
   }
   &__mobile {
@@ -241,13 +243,21 @@ main {
   }
   &__nav {
     @include tablet {
-      display: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s ease-in;
+      opacity: 0;
+      margin-bottom: 10px;
+      text-align: right;
     }
     ul {
       @extend %nav_common;
       li {
         @include tablet {
           display: block;
+          padding: 5px 0;
+          // border-bottom: 1px solid $whiteBg;
+          margin-right: 0 !important;
         }
         a {
           position: relative;
@@ -277,10 +287,33 @@ main {
   }
   &__social {
     @include tablet {
-      display: none;
+      overflow: hidden;
+      transition: 0.3s ease-in;
+      opacity: 0;
+      position: absolute;
+      top: 20px;
+      left: 30%;
+      transform: translateX(-50%);
     }
     ul {
       @extend %nav_common;
+    }
+  }
+  &.active {
+    .header {
+      &__nav {
+        @include tablet {
+          max-height: 100px;
+          height: 100%;
+          opacity: 1;
+        }
+      }
+      &__social {
+        @include tablet {
+          left: 50%;
+          opacity: 1;
+        }
+      }
     }
   }
 }
@@ -539,9 +572,7 @@ main {
   }
   &__image {
     width: 40%;
-    @include medium-desktop {
-      width: 50%;
-    }
+
     @include small-desktop {
       width: 100%;
       overflow: hidden;
@@ -559,7 +590,6 @@ main {
     align-self: center;
     padding: 2vw 5.2vw;
     @include medium-desktop {
-      width: 50%;
       padding: 2vw 4vw;
     }
     @include small-desktop {

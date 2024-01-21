@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from './Icon';
 import useDataFetching from '../Hooks/useDataFetching';
@@ -5,6 +6,7 @@ import Loading from './Loading';
 
 const Header = () => {
     const { data, loading, error } = useDataFetching('data.json');
+    const [menuToggle, setMenuToggle] = useState(false);
 
     if (loading) {
         return <Loading />;
@@ -16,15 +18,18 @@ const Header = () => {
 
     const { headerContent } = data || {};
 
+    const headerToggle = () => {
+        setMenuToggle(!menuToggle);
+    };
     return (
-        <header className="header">
+        <header className={`header ${menuToggle ? 'active' : ''}`}>
             <div className="wrapper">
                 <div className="header__inner">
                     <div className="header__logo">
                         <Link to={headerContent?.url}>
                             <img src={headerContent?.logo} alt={headerContent?.logoAlt} />
                         </Link>
-                        <button className="d-md-none d-sm-block header__mobile--nav">
+                        <button className="d-md-none d-sm-block header__mobile--nav" onClick={headerToggle}>
                             <Icon iconName='fi-rr-bars-staggered' />
                         </button>
                     </div>
