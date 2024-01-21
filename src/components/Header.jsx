@@ -30,7 +30,7 @@ const Header = () => {
                             <img src={headerContent?.logo} alt={headerContent?.logoAlt} />
                         </Link>
                         <button className="d-md-none d-sm-block header__mobile--nav" onClick={headerToggle}>
-                            <Icon iconName='fi-rr-bars-staggered' />
+                            {menuToggle ? <Icon iconName='fi-rr-cross' /> : <Icon iconName='fi-rr-bars-staggered' />}
                         </button>
                     </div>
                     <nav className="header__nav">
