@@ -23,7 +23,7 @@ const About = () => {
                         <img src={about.aboutImage} alt="" />
                     </div>
                     <div className="about__content--right">
-                        <h3 className="about__title">{about.aboutTitle}</h3>
+                        <h3 className="section__title">{about.aboutTitle}</h3>
                         {about.biography.map((item, index) => (
                             <p key={index}>{item}</p>
                         ))}
