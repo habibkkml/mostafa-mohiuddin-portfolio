@@ -36,7 +36,7 @@
                 "Managing",
                 "Director"
             ],
-            "homeImage": "https://i.ibb.co/VJPXkBg/DMD-photo1.png",
+            "homeImage": "https://i.ibb.co/0QrLD1x/DMD-photo1.jpg",
             "company": "Khoshroz Kitab Mahal Limited",
             "desc": "It was through Mostafa’s work at his grandfather’s publishing company during the summers that he discovered his love for the paper industry and assumed a full-time job as Deputy Managing Director. Mostafa says he owes most of his business acumen to his grandfather, who gave him his foundational training. This knowledge, paired with his love of nature, inspired Mostafa to open a business with his brother in 2021: Magura Agriculture Park Limited. This organic agriculture farm allows a one-stop solution for people to reach farmers and fresh products with ease."
         }
@@ -44,34 +44,34 @@
     "brands": {
         "brandLogos": [
             {
-                "logo": "https://i.ibb.co/jkVCyzR/kkml-logo-final-800x107.png",
+                "logo": "https://i.ibb.co/7r0H6LJ/kkml-logo-final-800x107.png",
                 "alt": "Khoshroz Kitab Mahal",
                 "url": "https://www.khoshrozltd.com/"
             },
             {
-                "logo": "https://i.ibb.co/cwZtCF1/mapl-logo.png",
+                "logo": "https://i.ibb.co/Gs4fBGk/MAPL-logo-768x204.png",
                 "alt": "Magura Agriculture Park Limited",
                 "url": "/"
             },
             {
-                "logo": "https://i.ibb.co/0QhFnYz/fasaion-logo-1298x542.png",
+                "logo": "https://i.ibb.co/1RtjCgb/fasaion-logo-1298x542.png",
                 "alt": "E-Stylze e-commerce",
                 "url": "https://www.estylzefashion.com/"
             },
             {
-                "logo": "https://i.ibb.co/N656bDd/logo-ndcl.png",
+                "logo": "https://i.ibb.co/j9NjjXt/logo-ndcl.png",
                 "alt": "National Development Company Limited",
                 "url": "https://www.ndcautobrick.com/"
             },
             {
-                "logo": "https://i.ibb.co/h2T2qTF/jatiyamudran.png",
+                "logo": "https://i.ibb.co/p0WncQ5/jatiyamudran.png",
                 "alt": "Jatiya Mudran",
                 "url": "https://www.jatiyamudran.com/"
             }
         ]
     },
     "about": {
-        "aboutImage": "https://i.ibb.co/yX0dW02/DMD-KKML.png",
+        "aboutImage": "https://i.ibb.co/cYvvgB5/DMD-KKML.jpg",
         "aboutTitle": "Biography",
         "biography": [
             "Born in Bangladesh and raised in the United States, Mostafa Mohiuddin is a businessman best known for his work in the publication sector. Though he was raised by his parents, Mostafa was most influenced by his grandfather, Mohiuddin Ahmed who was the Chairman and Founder of the publication house Khoshroz Kitab Mahal. Ahmed also founded NDC Auto Brick in an effort to produce pollution-free bricks in Bangladesh.",
@@ -84,7 +84,7 @@
         {
             "name": "Mr. Mohiuddin Ahmed",
             "designation": "Honorable Chairman",
-            "image": "https://i.ibb.co/p4bZxB1/honorable-founder.png",
+            "image": "https://i.ibb.co/3FWFQnS/honorable-founder.jpg",
             "company": "Khoshroz Kitab Mahal and NDC Auto brick",
             "descTitle": "Message from the Founder",
             "description": [
@@ -96,7 +96,7 @@
         {
             "name": "Mr. Mostafa Jamal Mohiuddin",
             "designation": "Honorable Managing Director",
-            "image": "https://i.ibb.co/VtdVm7D/MD-sir.png",
+            "image": "https://i.ibb.co/vsKrBss/MD-sir.jpg",
             "company": "Khoshroz Kitab Mahal, Magura Group And NDC Auto brick",
             "descTitle": "Background",
             "description": [
@@ -109,7 +109,7 @@
         {
             "name": "Mr. Mostafa Akhter Mohiuddin",
             "designation": "Chairman",
-            "image": "https://i.ibb.co/9N64nPq/mostafa-akhter.png",
+            "image": "https://i.ibb.co/GHVZZT7/mostafa-akhter.jpg",
             "company": "Magura Agriculture Park Ltd and Dream International.",
             "descTitle": "Background",
             "description": [
