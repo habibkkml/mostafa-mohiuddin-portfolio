@@ -51,7 +51,7 @@
             {
                 "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831587/DMD_website/MAPL-logo-768x204_xqsx9i.png",
                 "alt": "Magura Agriculture Park Limited",
-                "url": "/"
+                "url": "https://maguraagriculture.com/"
             },
             {
                 "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/fasaion-logo-1298x542_bnljas.png",
@@ -120,6 +120,6 @@
         }
     ],
     "footer": {
-        "copyright": "&copy; 2024 Mostafa Jafir Mohiuddin"
+        "copyright": "&copy; 2024 Mostafa Jafir Mohiuddin powered by KKML Developers"
     }
 }
