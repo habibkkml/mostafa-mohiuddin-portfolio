@@ -720,6 +720,10 @@ main {
         @include medium-desktop {
           font-size: 16px;
         }
+        @include mobile {
+          font-size: 14px;
+          text-align: justify;
+        }
       }
     }
   }
@@ -736,6 +740,9 @@ main {
     font-size: 20px;
     @include medium-desktop {
       font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
     }
   }
 }
