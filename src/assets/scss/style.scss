@@ -255,7 +255,6 @@ main {
         @include tablet {
           display: block;
           padding: 5px 0;
-          // border-bottom: 1px solid $whiteBg;
           margin-right: 0 !important;
         }
         a {
@@ -273,7 +272,8 @@ main {
             z-index: 1;
             transition: all 0.3s ease-in-out;
           }
-          &:hover {
+          &:hover,
+          &.active {
             color: $logo-color;
             &::after {
               width: 80%;

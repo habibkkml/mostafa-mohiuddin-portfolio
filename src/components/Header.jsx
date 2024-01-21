@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { Icon } from './Icon';
 import useDataFetching from '../Hooks/useDataFetching';
 import Loading from './Loading';
@@ -7,6 +7,11 @@ import Loading from './Loading';
 const Header = () => {
     const { data, loading, error } = useDataFetching('data.json');
     const [menuToggle, setMenuToggle] = useState(false);
+    const [activeLink, setActiveLink] = useState('');
+    useEffect(() => {
+        // Set the document title based on the active link
+        document.title = activeLink || 'Home';
+    }, [activeLink]);
 
     if (loading) {
         return <Loading />;
@@ -21,6 +26,11 @@ const Header = () => {
     const headerToggle = () => {
         setMenuToggle(!menuToggle);
     };
+    const handleNavItemClick = (url) => {
+        setMenuToggle(false);
+        setActiveLink(url);
+    };
+
     return (
         <header className={`header ${menuToggle ? 'active' : ''}`}>
             <div className="wrapper">
@@ -37,7 +47,13 @@ const Header = () => {
                         <ul className="header__nav--list list-unstyled">
                             {headerContent?.nav.map((navItem, index) => (
                                 <li key={index}>
-                                    <Link to={navItem.url}>{navItem.name}</Link>
+                                    <NavLink
+                                        to={navItem.url}
+                                        activeClassName="active" // Apply this class when the link is active
+                                        onClick={() => handleNavItemClick(navItem.name)}
+                                    >
+                                        {navItem.name}
+                                    </NavLink>
                                 </li>
                             ))}
                         </ul>
