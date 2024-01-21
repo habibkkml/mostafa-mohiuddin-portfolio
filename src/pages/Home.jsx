@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import useDataFetching from '../Hooks/useDataFetching';
 import About from '../components/About';
 import Loading from '../components/Loading';
+import { SEO } from '../components/SEO';
 
 const Home = () => {
     const { data, loading, error } = useDataFetching('data.json');

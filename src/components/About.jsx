@@ -1,7 +1,6 @@
 import Slider from "./Slider"
 import useDataFetching from '../Hooks/useDataFetching';
 import Loading from "./Loading";
-
 const About = () => {
     const { data, loading, error } = useDataFetching('data.json');
 
