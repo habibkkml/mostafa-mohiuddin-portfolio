@@ -44,7 +44,7 @@
     "brands": {
         "brandLogos": [
             {
-                "logo": "https://i.ibb.co/FBy33DD/kkml-logo.png",
+                "logo": "https://i.ibb.co/jkVCyzR/kkml-logo-final-800x107.png",
                 "alt": "Khoshroz Kitab Mahal",
                 "url": "https://www.khoshrozltd.com/"
             },
@@ -54,14 +54,19 @@
                 "url": "/"
             },
             {
-                "logo": "https://i.ibb.co/v4C9Hy0/mg-logo.png",
-                "alt": "Magura Group Limited",
-                "url": "https://maguragroup.com.bd/"
+                "logo": "https://i.ibb.co/0QhFnYz/fasaion-logo-1298x542.png",
+                "alt": "E-Stylze e-commerce",
+                "url": "https://www.estylzefashion.com/"
             },
             {
                 "logo": "https://i.ibb.co/N656bDd/logo-ndcl.png",
                 "alt": "National Development Company Limited",
                 "url": "https://www.ndcautobrick.com/"
+            },
+            {
+                "logo": "https://i.ibb.co/h2T2qTF/jatiyamudran.png",
+                "alt": "Jatiya Mudran",
+                "url": "https://www.jatiyamudran.com/"
             }
         ]
     },
