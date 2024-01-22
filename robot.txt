@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /$
-Allow: /blog/
-Allow: /contact/
-Allow: /about/
-Disallow: /private/
-Disallow: /restricted/
-Disallow: /temp/
-Disallow: /secret-page.html
