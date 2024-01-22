@@ -20,7 +20,7 @@ const Home = () => {
     return (
         <>
             <SEO
-                title={homeContent.title}
+                title={`Home | ${homeContent.title}`}
                 description={homeContent.desc}
                 name={homeContent.title}
                 type="article"

@@ -18,7 +18,7 @@ const About = () => {
     return (
         <>
             <SEO
-                title={homeContent.title}
+                title={`History of | ${homeContent.title}`}
                 description={homeContent.desc}
                 name={homeContent.title}
                 type="article"
