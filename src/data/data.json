@@ -16,15 +16,15 @@
         "social": [
             {
                 "icon": "fi-brands-facebook",
-                "link": "#"
+                "link": "https://www.facebook.com/mostafajmohiuddin/"
             },
             {
-                "icon": "fi-brands-instagram",
-                "link": "#"
+                "icon": "fi-brands-linkedin",
+                "link": "https://bd.linkedin.com/in/mostafajafirmohiuddin"
             },
             {
                 "icon": "fi-brands-youtube",
-                "link": "#"
+                "link": "https://www.youtube.com/@khoshrozkitabmahalltd"
             }
         ]
     },

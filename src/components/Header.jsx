@@ -49,7 +49,7 @@ const Header = () => {
                                 <li key={index}>
                                     <NavLink
                                         to={navItem.url}
-                                        activeClassName="active" // Apply this class when the link is active
+                                        activeclassname="active" // Apply this class when the link is active
                                         onClick={() => handleNavItemClick(navItem.name)}
                                     >
                                         {navItem.name}
@@ -62,7 +62,7 @@ const Header = () => {
                         <ul className="header__social--icons list-unstyled">
                             {headerContent?.social.map((socialItem, index) => (
                                 <li key={index}>
-                                    <Link to={socialItem.url} target='_blank' rel="noreferrer">
+                                    <Link to={socialItem.link} target='_blank' rel="noreferrer">
                                         <Icon iconName={socialItem.icon} />
                                     </Link>
                                 </li>

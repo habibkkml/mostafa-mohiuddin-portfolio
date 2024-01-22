@@ -1,7 +1,13 @@
+// External Libraries
 @import "@flaticon/flaticon-uicons/css/all/all.css";
 @import "bootstrap/scss/bootstrap.scss";
-@import "variables", "mixins";
+
+// Custom Variables and Mixins
+@import "variables";
+@import "mixins";
 @import "loading";
+
+// Reset and Global Styles
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,67 +17,85 @@
 ::selection {
   background-color: rgba(0, 128, 128, 0.531);
 }
+
 html,
 body {
   height: 100%;
 }
+
 body {
   font-family: $body-font;
   font-size: 16px;
 }
 
+// Headings
 h1 {
   font-family: $heading-font;
   font-size: 46px;
 }
 
+// Common Styles
+%before_after {
+  position: absolute;
+  content: "";
+}
+
 %nav_common {
   margin: 0;
   padding: 0;
+
   li {
     display: inline-block;
+
     &:not(:last-child) {
       margin-right: 20px;
     }
+
     a {
       text-decoration: none;
       color: $white;
       font-size: 20px;
+
       @include medium-desktop {
         font-size: 16px;
       }
+
       @include mobile {
         font-size: 14px;
       }
     }
   }
 }
-%before_after {
-  position: absolute;
-  content: "";
-}
+
 %title_font {
   font-size: 3.2vw;
+
   @include tablet {
     font-size: 4vw;
   }
+
   @include mobile {
     font-size: 6vw;
   }
 }
-.section__title {
+
+// Section Titles
+.section__title,
+%section_title {
   position: relative;
-  font-size: 40px;
   margin: 20px 0;
   font-weight: 900;
   font-family: $heading-font;
   color: $dark;
+
   @include medium-desktop {
     font-size: 35px;
   }
+
   @include mobile {
     font-size: 30px;
   }
+
   &::before {
     @extend %before_after;
     bottom: -15px;
@@ -79,12 +103,11 @@ h1 {
     height: 3px;
     border-radius: 5px;
     background-color: $logo-color;
+
     @include medium-desktop {
       bottom: -10px;
     }
-    @include small-desktop {
-      bottom: -10px;
-    }
+
     @include mobile {
       bottom: -7px;
     }
@@ -94,40 +117,14 @@ h1 {
     display: inline-block;
   }
 }
-%section_title {
-  position: relative;
-  margin: 3vw 0;
-  font-weight: 900;
-  font-family: $heading-font;
-  color: $dark;
-  &::before {
-    @extend %before_after;
-    bottom: -30px;
-    width: 100%;
-    height: 3px;
-    border-radius: 5px;
-    background-color: $logo-color;
-    @include medium-desktop {
-      bottom: -20px;
-    }
-    @include small-desktop {
-      bottom: -10px;
-    }
-    @include mobile {
-      bottom: -7px;
-    }
-  }
-  @include small-desktop {
-    margin: 2vw 0;
-  }
-  @include tablet {
-    display: inline-block;
-  }
-}
+
+// Swiper Styles
 .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
 }
+
+// Primary Button Styles
 .primary__btn {
   position: relative;
   background-color: transparent;
@@ -136,34 +133,36 @@ h1 {
   outline: none;
   text-transform: capitalize;
   font-size: 20px;
+
   @include medium-desktop {
     font-size: 18px;
   }
+
   @include small-desktop {
     font-size: 16px;
   }
+
   @include mobile {
     font-size: 4vw;
   }
-  &::before {
-    @extend %before_after;
-    top: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    z-index: 1;
-    background-image: linear-gradient(to right, #ff4e7a, $white, $logo-color);
-    transition: 0.3s all ease;
-  }
+
+  &::before,
   &::after {
     @extend %before_after;
-    bottom: -2px;
-    right: 0;
     width: 0;
     height: 2px;
-    z-index: 1;
-    background-image: linear-gradient(to right, #ff4e7a, $white, $logo-color);
+    background-color: $white;
     transition: 0.3s all ease;
+  }
+
+  &::before {
+    top: -2px;
+    left: 0;
+  }
+
+  &::after {
+    bottom: -2px;
+    right: 0;
   }
 
   a {
@@ -174,40 +173,47 @@ h1 {
     text-decoration: none;
     color: $logo-color;
     transition: 0.3s all ease-in-out;
+
     @include medium-desktop {
       font-size: 18px;
     }
+
     @include small-desktop {
       font-size: 16px;
       padding: 8px 30px;
     }
+
     @include mobile {
       font-size: 4vw;
     }
-    &::before {
-      @extend %before_after;
-      left: -2px;
-      width: 2px;
-      height: 0;
-      bottom: 0;
-      background-image: linear-gradient(to bottom, #ff4e7a, $white, $logo-color);
-      transition: 0.3s all ease;
-    }
+
+    &::before,
     &::after {
       @extend %before_after;
-      right: -2px;
       width: 2px;
-      height: 0;
-      top: 0;
-      background-image: linear-gradient(to top, #ff4e7a, $white, $logo-color);
+      background-image: linear-gradient(to bottom, $dark, $white, $logo-color);
       transition: 0.3s all ease;
     }
+
+    &::before {
+      left: -2px;
+      height: 0;
+      bottom: 0;
+    }
+
+    &::after {
+      right: -2px;
+      height: 0;
+      top: 0;
+    }
   }
+
   &:hover {
     &::before,
     &:after {
       width: 100%;
     }
+
     a {
       color: $white;
 
@@ -218,33 +224,37 @@ h1 {
     }
   }
 }
+
+// Main Content Styles
 main {
   min-height: calc(100vh - 1.6vw);
 }
+
 .wrapper {
   position: relative;
   z-index: 2;
   width: 100%;
   box-sizing: border-box;
-  padding-top: 1.6vw;
-  padding-bottom: 1.6vw;
-  padding-left: 5.2vw;
-  padding-right: 5.2vw;
+  padding: 1.6vw 5.2vw;
   pointer-events: auto;
 }
 
+// Header Styles
 .header {
   background-color: $background;
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+
     @include tablet {
       display: block;
       z-index: 4;
     }
   }
+
   &__mobile {
     &--nav {
       background-color: transparent;
@@ -252,32 +262,39 @@ main {
       border: 0;
       outline: none;
       font-size: 20px;
+
       &:focus {
         outline: none;
       }
     }
   }
+
   &__logo {
     @include tablet {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+
     a {
       display: block;
       width: 90px;
+
       @include medium-desktop {
         width: 70px;
       }
+
       @include small-desktop {
         width: 60px;
       }
+
       img {
         width: 100%;
         object-fit: contain;
       }
     }
   }
+
   &__nav {
     @include tablet {
       max-height: 0;
@@ -286,17 +303,21 @@ main {
       opacity: 0;
       text-align: right;
     }
+
     ul {
       @extend %nav_common;
+
       li {
         @include tablet {
           display: block;
           padding: 5px 0;
           margin-right: 0 !important;
         }
+
         a {
           position: relative;
           transition: 0.3s ease-in-out;
+
           &::after {
             @extend %before_after;
             bottom: -3px;
@@ -309,9 +330,11 @@ main {
             z-index: 1;
             transition: all 0.3s ease-in-out;
           }
+
           &:hover,
           &.active {
             color: $logo-color;
+
             &::after {
               width: 80%;
               background-color: $logo-color;
@@ -321,6 +344,7 @@ main {
       }
     }
   }
+
   &__social {
     @include tablet {
       overflow: hidden;
@@ -331,8 +355,25 @@ main {
       left: -100%;
       transform: translateX(-50%) scale(0);
     }
+
     ul {
       @extend %nav_common;
+
+      li {
+        a {
+          text-align: center;
+
+          i {
+            transition: all 0.3s ease-in-out;
+            line-height: 0.5;
+
+            &:hover {
+              color: $logo-color;
+            }
+          }
+        }
+      }
+
       @include tablet {
         li {
           margin-right: 0 !important;
@@ -341,6 +382,7 @@ main {
       }
     }
   }
+
   &.active {
     .header {
       &__nav {
@@ -350,6 +392,7 @@ main {
           opacity: 1;
         }
       }
+
       &__social {
         @include tablet {
           transform: scale(1);
@@ -360,7 +403,8 @@ main {
     }
   }
 }
-// Home Style
+
+// Home Section Styles
 .home {
   background-color: $background;
   position: relative;
@@ -368,11 +412,11 @@ main {
   height: 100%;
   min-height: calc(100vh - 145px);
   padding: 90px 0;
-  display: flex;
-  align-items: center;
+
   @include medium-desktop {
     padding: 60px 0;
   }
+
   @include tablet {
     display: flex;
     flex-direction: column-reverse;
@@ -382,6 +426,7 @@ main {
     padding-top: 0;
     padding-bottom: 40px;
   }
+
   &__image {
     position: absolute;
     right: 0;
@@ -389,34 +434,39 @@ main {
     width: 40%;
     height: 100%;
     z-index: -1;
+
     @include medium-desktop {
       width: 50%;
     }
+
     @include tablet {
       width: 100%;
       position: relative;
     }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
+
   &__title {
     text-align: left;
+
     @include tablet {
       text-align: center;
       padding-top: 40px;
     }
+
     h1 {
       @extend %title_font;
       color: $white;
       text-transform: uppercase;
       font-weight: 400;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       position: relative;
       display: inline-block;
-      margin-bottom: 20px;
 
       &::before {
         @extend %before_after;
@@ -429,10 +479,12 @@ main {
       }
     }
   }
+
   &__designation {
     @include tablet {
       text-align: center;
     }
+
     h2 {
       font-size: 10vw;
       font-family: $heading-font;
@@ -443,29 +495,38 @@ main {
       text-transform: uppercase;
       margin: 0;
       margin-bottom: 10px;
+
       @include medium-desktop {
         letter-spacing: -10px;
       }
+
       @include small-desktop {
         letter-spacing: -5px;
       }
+
       @include mobile {
         font-size: 15vw;
       }
+
       span {
         display: block;
         margin-left: 160px;
+
         @include medium-desktop {
           margin-left: 85px;
         }
+
         @include small-desktop {
           margin-left: 75px;
         }
+
         @include tablet {
           margin: 0;
         }
+
         &:nth-child(odd) {
           margin-left: 25px;
+
           @include tablet {
             margin-left: 0;
           }
@@ -473,10 +534,12 @@ main {
       }
     }
   }
+
   &__company {
     @include tablet {
       text-align: center;
     }
+
     h3 {
       @extend %title_font;
       font-family: $heading-font;
@@ -485,6 +548,7 @@ main {
       margin-top: 10px;
       display: inline-block;
       position: relative;
+
       &::before {
         position: absolute;
         content: "";
@@ -493,21 +557,26 @@ main {
         height: 3px;
         border-radius: 5px;
         bottom: -10px;
+
         @include mobile {
           bottom: -13px;
         }
       }
     }
   }
+
   &__details {
     padding-top: 20px;
+
     p {
       font-size: 20px;
       font-weight: 600;
       color: $white;
+
       @include medium-desktop {
         font-size: 16px;
       }
+
       @include mobile {
         font-weight: 400;
         font-size: 4vw;
@@ -516,16 +585,18 @@ main {
   }
 }
 
-// About
-
+// About Section Styles
 .about {
   background-color: $whiteBg;
   position: relative;
+
   .swiper-wrapper {
     align-items: center;
   }
+
   .swiper-slide {
     height: 120px;
+
     img {
       width: 100%;
       height: 100%;
@@ -533,49 +604,61 @@ main {
       object-position: center;
     }
   }
+
   &__content {
     position: relative;
     display: flex;
     align-items: stretch;
+
     @include tablet {
       display: block;
       text-align: center;
     }
+
     &--right {
       flex-basis: 60%;
       width: 60%;
       padding: 2.5vw 6vw;
+
       @include medium-desktop {
         width: 50%;
         flex-basis: 50%;
         padding: 2vw 4vw;
       }
+
       @include tablet {
         width: 100%;
         flex-basis: 100%;
       }
     }
   }
+
   &__title {
     @extend %section_title;
     font-size: 40px;
   }
+
   p {
     font-size: 20px;
     color: $dark;
+
     @include medium-desktop {
       font-size: 16px;
     }
+
     @include mobile {
       font-size: 14px;
       text-align: justify;
     }
   }
+
   &__image {
     width: 40%;
+
     @include medium-desktop {
       width: 50%;
     }
+
     @include tablet {
       width: 100%;
       max-height: 450px;
@@ -583,13 +666,16 @@ main {
       height: 100%;
       overflow: hidden;
     }
+
     @include mobile {
       max-height: 350px;
     }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+
       @include tablet {
         object-fit: contain;
       }
@@ -599,41 +685,52 @@ main {
 
 // History
 .history {
+  background-color: $background;
+  &__image {
+    img {
+      height: 100%;
+    }
+  }
   &__content {
     display: flex;
     align-items: stretch;
+
     &:nth-child(even) {
       flex-direction: row-reverse;
+      background-color: $whiteBg;
       @include small-desktop {
         flex-direction: column;
       }
     }
+
     @include small-desktop {
       flex-direction: column;
     }
   }
   &__image {
-    width: 40%;
-
     @include small-desktop {
-      overflow: hidden;
+      padding: 1.6vw 4.2vw;
       max-width: 400px;
       width: 100%;
       height: 400px;
-      padding: 1.6vw 4.2vw;
       margin-bottom: 0;
+      overflow: hidden;
     }
+
     @include mobile {
       max-width: 320px;
       margin: 0 auto;
     }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+
       @include small-desktop {
         object-position: top;
       }
+
       @include tablet {
         border-radius: 10px;
       }
@@ -643,86 +740,109 @@ main {
     width: 60%;
     align-self: center;
     padding: 2vw 5.2vw;
+
     @include medium-desktop {
       padding: 2vw 4vw;
     }
+
     @include small-desktop {
       width: 100%;
     }
+
     &--top {
       padding: 2vw 0;
+
       @include small-desktop {
         padding-top: 0;
       }
+
       h3 {
         font-size: 2vw;
         font-weight: 700;
         margin-bottom: 0;
         color: $logo-color;
+
         @include medium-desktop {
           font-size: 2.2vw;
         }
+
         @include small-desktop {
           font-size: 25px;
         }
+
         @include mobile {
           font-size: 20px;
         }
       }
+
       h2 {
         font-family: $heading-font;
         font-size: 4vw;
         font-weight: 900;
         letter-spacing: -5px;
         line-height: 1.5;
+
         @include medium-desktop {
           letter-spacing: -2px;
           line-height: 0.8;
           padding: 5px 0;
         }
+
         @include small-desktop {
           font-size: 35px;
         }
+
         @include mobile {
           font-size: 30px;
         }
       }
+
       p {
         font-size: 2vw;
         color: $logo-color;
         font-weight: 600;
         margin-bottom: 0;
         line-height: 1;
+
         @include medium-desktop {
           font-size: 2.2vw;
         }
+
         @include small-desktop {
           font-size: 25px;
         }
+
         @include mobile {
           font-size: 20px;
         }
       }
     }
+
     &--main {
       h4 {
         @include medium-desktop {
           font-size: 2.5vw;
         }
+
         @include small-desktop {
           font-size: 25px;
         }
+
         @include mobile {
           font-size: 20px;
         }
+
         font-weight: 600;
         color: $dark;
       }
+
       p {
         font-size: 20px;
+
         @include medium-desktop {
           font-size: 16px;
         }
+
         @include mobile {
           font-size: 14px;
         }
@@ -730,6 +850,7 @@ main {
     }
   }
 }
+
 // Footer
 .footer {
   text-align: center;
@@ -737,12 +858,15 @@ main {
   background-color: $background;
   color: $white;
   padding: 20px 0;
+
   p {
     margin: 0;
     font-size: 20px;
+
     @include medium-desktop {
       font-size: 16px;
     }
+
     @include mobile {
       font-size: 14px;
     }
