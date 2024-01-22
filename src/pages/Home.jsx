@@ -55,7 +55,6 @@ const Home = () => {
                 <div className="home__image">
                     <img src={homeContent.homeImage} alt={homeContent.title} />
                 </div>
-
             </section>
             <section className="home__des">
                 <div className="wrapper">
