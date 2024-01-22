@@ -27,8 +27,13 @@ const Slider = () => {
                 pauseOnMouseEnter: true
             }}
             breakpoints={{
-                640: {
+
+                575: {
                     slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 2,
                     spaceBetween: 20,
                 },
                 768: {
@@ -41,9 +46,8 @@ const Slider = () => {
         >
             {brands.brandLogos.map((item, index) => (
                 <SwiperSlide key={index}>
-                    <Link to={item.url} target='_blank'>
+                    <Link to={item.url} target='_blank' name={item.alt} title={item.alt}>
                         <img src={item.logo} alt={item.alt} />
-
                     </Link>
                 </SwiperSlide>
 

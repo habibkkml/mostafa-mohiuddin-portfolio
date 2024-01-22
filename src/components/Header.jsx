@@ -62,7 +62,7 @@ const Header = () => {
                         <ul className="header__social--icons list-unstyled">
                             {headerContent?.social.map((socialItem, index) => (
                                 <li key={index}>
-                                    <Link to={socialItem.link} target='_blank' rel="noreferrer">
+                                    <Link to={socialItem.link} target='_blank' rel="noreferrer" title={socialItem.name} name={socialItem.name}>
                                         <Icon iconName={socialItem.icon} />
                                     </Link>
                                 </li>

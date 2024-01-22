@@ -16,15 +16,18 @@
         "social": [
             {
                 "icon": "fi-brands-facebook",
-                "link": "https://www.facebook.com/mostafajmohiuddin/"
+                "link": "https://www.facebook.com/mostafajmohiuddin/",
+                "name": "Mostafa Jafir's Facebook"
             },
             {
                 "icon": "fi-brands-linkedin",
-                "link": "https://bd.linkedin.com/in/mostafajafirmohiuddin"
+                "link": "https://bd.linkedin.com/in/mostafajafirmohiuddin",
+                "name": "Mostafa Jafir's Linkedin"
             },
             {
                 "icon": "fi-brands-youtube",
-                "link": "https://www.youtube.com/@khoshrozkitabmahalltd"
+                "link": "https://www.youtube.com/@khoshrozkitabmahalltd",
+                "name": "Khoshroz Kitab mahal's youtube"
             }
         ]
     },
@@ -72,6 +75,7 @@
     },
     "about": {
         "aboutImage": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/DMD_KKML_gz3mir.jpg",
+        "aboutAlt": "Mostafa Jafir Mohiuddin",
         "aboutTitle": "Biography",
         "biography": [
             "Born in Bangladesh and raised in the United States, Mostafa Mohiuddin is a businessman best known for his work in the publication sector. Though he was raised by his parents, Mostafa was most influenced by his grandfather, Mohiuddin Ahmed who was the Chairman and Founder of the publication house Khoshroz Kitab Mahal. Ahmed also founded NDC Auto Brick in an effort to produce pollution-free bricks in Bangladesh.",

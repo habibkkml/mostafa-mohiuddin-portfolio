@@ -19,7 +19,7 @@ const About = () => {
             <section className="about">
                 <div className="about__content">
                     <div className="about__image">
-                        <img src={about.aboutImage} alt="" />
+                        <img src={about.aboutImage} alt={about.aboutAlt} />
                     </div>
                     <div className="about__content--right">
                         <h3 className="section__title">{about.aboutTitle}</h3>
