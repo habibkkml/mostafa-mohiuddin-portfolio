@@ -16,17 +16,30 @@ const Home = () => {
     }
 
     const { homeContent } = data.home;
-
+    const seoProps = {
+        title: 'Home | Mostafa Mohiuddin',
+        description: homeContent.desc,
+        name: homeContent.title,
+        type: 'website',
+        image: homeContent.homeImage,
+        socialLinks: [
+            {
+                icon: 'brands-facebook',
+                link: 'https://www.facebook.com/mostafajmohiuddin/',
+            },
+            {
+                icon: 'brands-linkedin',
+                link: 'https://bd.linkedin.com/in/mostafajafirmohiuddin',
+            },
+            {
+                icon: 'brands-youtube',
+                link: 'https://www.youtube.com/@khoshrozkitabmahalltd',
+            },
+        ],
+    };
     return (
         <>
-            <SEO
-                title={`Home | ${homeContent.title}`}
-                description={homeContent.desc}
-                name={homeContent.title}
-                type="article"
-                image={homeContent.homeImage}
-                socialLinks={data.headerContent.social}
-            />
+            <SEO {...seoProps} />
             <section className="home">
                 <div className="wrapper">
                     <div className="row">
