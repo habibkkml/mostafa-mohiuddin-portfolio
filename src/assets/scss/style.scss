@@ -438,12 +438,16 @@ main {
   z-index: 1;
   height: 100%;
   min-height: calc(100vh - 145px);
-  padding: 90px 0;
 
-  @include medium-desktop {
-    padding: 60px 0;
+  &__des {
+    background-color: $background;
+    text-align: center;
+    .wrapper {
+      @include tablet {
+        padding-top: 0;
+      }
+    }
   }
-
   @include tablet {
     display: flex;
     flex-direction: column-reverse;
@@ -451,7 +455,6 @@ main {
     justify-content: center;
     text-align: center;
     padding-top: 0;
-    padding-bottom: 40px;
   }
 
   &__image {
@@ -563,10 +566,14 @@ main {
   }
 
   &__company {
+    margin-bottom: 2vw;
     @include tablet {
       text-align: center;
+      margin-bottom: 3vw;
     }
-
+    @include mobile {
+      margin-bottom: 5vw;
+    }
     h3 {
       @extend %title_font;
       font-family: $heading-font;
@@ -586,7 +593,7 @@ main {
         bottom: -10px;
 
         @include mobile {
-          bottom: -13px;
+          bottom: -10px;
         }
       }
     }
@@ -594,7 +601,9 @@ main {
 
   &__details {
     padding-top: 20px;
-
+    @include tablet {
+      padding-top: 0;
+    }
     p {
       font-size: 1.5vw;
       font-weight: 400;

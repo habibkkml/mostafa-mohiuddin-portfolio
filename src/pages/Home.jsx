@@ -46,9 +46,6 @@ const Home = () => {
                             <div className="home__company">
                                 <h3>{homeContent.company}</h3>
                             </div>
-                            <div className="home__details">
-                                <p>An experienced researcher, inventor, and author, with a track record at leading R&D teams, writing winning grant proposals, whilst being passionate about deep-tech innovation that leads to impact.</p>
-                            </div>
                             <button className='primary__btn'>
                                 <Link to={'/history'}> History</Link>
                             </button>
@@ -57,6 +54,18 @@ const Home = () => {
                 </div>
                 <div className="home__image">
                     <img src={homeContent.homeImage} alt={homeContent.title} />
+                </div>
+
+            </section>
+            <section className="home__des">
+                <div className="wrapper">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="home__details">
+                                <p>{homeContent.desc}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <About />
