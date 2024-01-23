@@ -4,8 +4,8 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import History from './pages/History';
 import { Notfound } from './pages/Notfound';
+import Companies from './pages/Companies';
 import Footer from './components/Footer';
-
 import './App.scss'
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/history" element={<History />} />
+              <Route path="/companies" element={<Companies />} />
               <Route path="*" element={<Notfound />} />
             </Routes>
           </main>

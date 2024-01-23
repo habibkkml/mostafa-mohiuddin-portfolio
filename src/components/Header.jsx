@@ -1,27 +1,26 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Icon } from './Icon';
-import useDataFetching from '../Hooks/useDataFetching';
-import Loading from './Loading';
 
 const Header = () => {
-    const { data, loading, error } = useDataFetching('data.json');
     const [menuToggle, setMenuToggle] = useState(false);
     const [activeLink, setActiveLink] = useState('');
+    const [data, setData] = useState({});
     useEffect(() => {
-        // Set the document title based on the active link
         document.title = activeLink || 'Home';
     }, [activeLink]);
 
-    if (loading) {
-        return <Loading />;
-    }
+    useEffect(() => {
+        fetch("./common.json")
+            .then((response) => response.json())
+            .then((data) => {
+                setData(data);
+            });
+    }, [])
 
-    if (error) {
-        return <div>Error fetching data: {error.message}</div>;
-    }
 
-    const { headerContent } = data || {};
+    const headerContent = data.headerContent;
+    // console.log(headerContent)
 
     const headerToggle = () => {
         setMenuToggle(!menuToggle);

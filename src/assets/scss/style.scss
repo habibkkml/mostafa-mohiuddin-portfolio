@@ -253,9 +253,6 @@ h1 {
   }
 }
 // Main Content Styles
-main {
-  min-height: calc(100vh - 1.6vw);
-}
 
 .wrapper {
   position: relative;
@@ -928,6 +925,112 @@ main {
   }
 }
 
+// Company
+.company {
+  background-color: $background;
+  &__desc {
+    color: $white;
+    font-size: 1.2vw;
+    @include medium-desktop {
+      font-size: 18px;
+    }
+    @include small-desktop {
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+  &__wrapper {
+    background-color: $whiteBg;
+    padding: 3vw 0;
+  }
+
+  &__container {
+    font-size: 1vw;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: lighten($color: $whiteBg, $amount: 10);
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      @extend %before_after;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: darken($color: $whiteBg, $amount: 3);
+      z-index: -1;
+      transition: all 0.3s cubic-bezier(0.36, 0.07, 0, 0.51);
+    }
+    &::after {
+      @extend %before_after;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 100%;
+      background-color: darken($color: $whiteBg, $amount: 3);
+      z-index: -1;
+      transition: all 0.6s ease-in-out;
+    }
+    &:hover {
+      &::before {
+        width: 50%;
+      }
+      &::after {
+        width: 50%;
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $dark;
+    }
+  }
+  .col-lg-4 {
+    @for $i from 4 through 7 {
+      &:nth-child(#{$i}) {
+        .company__container {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &__logo {
+    display: block;
+    overflow: hidden;
+    width: 120px;
+    height: 100px;
+    margin-right: 20px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: left;
+    }
+  }
+  &__text {
+    p {
+      margin-bottom: 0;
+      font-size: 1.2vw;
+      font-weight: 700;
+      @include medium-desktop {
+        font-size: 16px;
+      }
+    }
+  }
+}
+.company__container {
+  @for $i from 4 through 7 {
+    &:nth-child(#{$i}) {
+      margin-bottom: 100px;
+    }
+  }
+}
 // Footer
 .footer {
   text-align: center;

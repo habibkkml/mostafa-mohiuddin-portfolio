@@ -11,6 +11,10 @@
             {
                 "name": "History",
                 "url": "/history"
+            },
+            {
+                "name": "Companies",
+                "url": "/companies"
             }
         ],
         "social": [
@@ -47,7 +51,7 @@
     "brands": {
         "brandLogos": [
             {
-                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831586/DMD_website/kkml-logo-final-800x107_uvryuj.png",
+                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705983043/DMD_website/Logo-02_v1uyne.png",
                 "alt": "Khoshroz Kitab Mahal",
                 "url": "https://www.khoshrozltd.com/"
             },
@@ -57,24 +61,29 @@
                 "url": "https://maguraagriculture.com/"
             },
             {
-                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/fasaion-logo-1298x542_bnljas.png",
+                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705983043/DMD_website/Logo-06_eih5ee.png",
+                "alt": "Dream International Limited",
+                "url": "https://www.dreaminternationallimited.com/"
+            },
+            {
+                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705983043/DMD_website/Logo-05_uusypl.png",
                 "alt": "E-Stylze e-commerce",
                 "url": "https://www.estylzefashion.com/"
             },
             {
-                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831587/DMD_website/logo-ndcl_zoetm2.png",
+                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705983043/DMD_website/Logo-03_v6mckf.png",
                 "alt": "National Development Company Limited",
                 "url": "https://www.ndcautobrick.com/"
             },
             {
-                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831587/DMD_website/jatiyamudran_flt49r.png",
+                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705983043/DMD_website/Logo-04_mz04vn.png",
                 "alt": "Jatiya Mudran",
                 "url": "https://www.jatiyamudran.com/"
             }
         ]
     },
     "about": {
-        "aboutImage": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/DMD_KKML_gz3mir.jpg",
+        "aboutImage": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705924259/dmd_kkml_itugov.jpg",
         "aboutAlt": "Mostafa Jafir Mohiuddin",
         "aboutTitle": "Biography",
         "biography": [
@@ -123,6 +132,57 @@
             ]
         }
     ],
+    "company": {
+        "desc": [
+            "The expansion and diversification have indeed opened new opportunities for the Khoshroz Group, with the management focusing on providing a range of benevolent services beyond mere profit-making. The rising Khoshroz Group adheres to the principle of conducting business operations for the betterment of society. Through years of dedication and hard work, the Khoshroz Group has evolved into a multi-faceted entity, covering essential sectors such as food, clothing, housing, education, and healthcare.",
+            "The Khoshroz Group has been instrumental in enhancing the lifestyle of the Bangladeshi people. Each subsidiary of the Khoshroz Group plays a significant role in the economic development of the country, by establishing industries, plants, and engaging in various activities across multiple sectors.",
+            "The Khoshroz Group is dedicated to shaping the future of the nation. The various concerns under the Khoshroz Group are as follows:"
+        ],
+        "companies": [
+            {
+                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705983043/DMD_website/Logo-01_gnxn17.png",
+                "alt": "Khoshroz Group",
+                "url": "https://www.khoshrozltd.com/",
+                "text": "Khoshroz Group Limited"
+            },
+            {
+                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705983043/DMD_website/Logo-02_v1uyne.png",
+                "alt": "Khoshroz Kitab Mahal",
+                "url": "https://www.khoshrozltd.com/",
+                "text": "Khoshroz Kitab Mahal Limited"
+            },
+            {
+                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831587/DMD_website/MAPL-logo-768x204_xqsx9i.png",
+                "alt": "Magura Agriculture Park Limited",
+                "url": "https://maguraagriculture.com/",
+                "text": "Magura Group Limited"
+            },
+            {
+                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705983043/DMD_website/Logo-06_eih5ee.png",
+                "alt": "Dream International Limited",
+                "url": "https://www.dreaminternationallimited.com/",
+                "text": "Dream International Limited"
+            },
+            {
+                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705983043/DMD_website/Logo-05_uusypl.png",
+                "alt": "E-Stylze fashion e-commerce",
+                "url": "https://www.estylzefashion.com/",
+                "text": "E-stylze Fashion Limited"
+            },
+            {
+                "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705983043/DMD_website/Logo-03_v6mckf.png",
+                "alt": "National Development Company Limited",
+                "url": "https://www.ndcautobrick.com/",
+                "text": "National Development Company Limited"
+            },
+            {
+                "logo": "/src/assets/img/jmpl.png",
+                "alt": "Jatiya Mudran",
+                "url": "https://www.jatiyamudran.com/",
+                "text": "Jatiya Mudran Limited"
+            }
+        ]
+    },
     "footer": {
         "copyright": "&copy; all rights reserved 2024 Mostafa Jafir Mohiuddin. Developed and Maintained by KKML Developers"
     }

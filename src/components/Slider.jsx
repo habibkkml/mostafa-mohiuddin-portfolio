@@ -1,21 +1,21 @@
-import useDataFetching from '../Hooks/useDataFetching';
+import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
-import Loading from './Loading';
 
 const Slider = () => {
-    const { data, loading, error } = useDataFetching('data.json');
+    const [data, setData] = useState({});
 
-    if (loading) {
-        return <Loading />;
-    }
+    useEffect(() => {
+        fetch("./about.json")
+            .then((response) => response.json())
+            .then((data) => {
+                setData(data);
+            });
+    }, [])
 
-    if (error) {
-        return <div>Error fetching data: {error.message}</div>;
-    }
 
-    const { brands } = data || {};
+    const brands = data?.brands;
     return (
         <Swiper
             spaceBetween={0}
@@ -44,7 +44,7 @@ const Slider = () => {
             }}
             modules={[FreeMode, Autoplay]}
         >
-            {brands.brandLogos.map((item, index) => (
+            {brands?.brandLogos?.map((item, index) => (
                 <SwiperSlide key={index}>
                     <Link to={item.url} target='_blank' name={item.alt} title={item.alt}>
                         <img src={item.logo} alt={item.alt} />

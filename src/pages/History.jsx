@@ -1,26 +1,27 @@
-import useDataFetching from '../Hooks/useDataFetching';
+import { useEffect, useState } from 'react';
 import Loading from '../components/Loading';
 import { SEO } from '../components/SEO';
 
 const About = () => {
-    const { data, loading, error } = useDataFetching('data.json');
+    const [data, setData] = useState({});
 
-    if (loading) {
-        return <Loading />;
-    }
+    useEffect(() => {
+        fetch("./history.json")
+            .then((response) => response.json())
+            .then((data) => {
+                setData(data);
+                console.log(data)
 
-    if (error) {
-        return <div>Error fetching data: {error.message}</div>;
-    }
-
-    const { history } = data;
-    const { homeContent } = data.home;
+            });
+    }, [])
+    if (!data) <Loading />
+    const history = data?.history;
     const seoProps = {
         title: 'History of | Mostafa Mohiuddin',
-        description: homeContent.desc,
-        name: homeContent.title,
+        // description: homeContent.desc,
+        // name: homeContent.title,
         type: 'website',
-        image: homeContent.homeImage,
+        // image: homeContent.homeImage,
         socialLinks: [
             {
                 icon: 'brands-facebook',
@@ -40,7 +41,7 @@ const About = () => {
         <>
             <SEO {...seoProps} />
             <section className="history">
-                {history.map((item, index) => (
+                {history?.map((item, index) => (
 
                     <div className="history__content" key={index}>
 

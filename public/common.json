@@ -1,0 +1,38 @@
+{
+    "headerContent": {
+        "logo": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831800/DMD_website/mm-logo-300_gbi4ye.png",
+        "logoAlt": "Khoshroz Kitab Mahal - Mostafa Jafir Mohiuddin",
+        "url": "/",
+        "nav": [
+            {
+                "name": "Home",
+                "url": "/"
+            },
+            {
+                "name": "History",
+                "url": "/history"
+            },
+            {
+                "name": "Companies",
+                "url": "/companies"
+            }
+        ],
+        "social": [
+            {
+                "icon": "fi-brands-facebook",
+                "link": "https://www.facebook.com/mostafajmohiuddin/",
+                "name": "Mostafa Jafir's Facebook"
+            },
+            {
+                "icon": "fi-brands-linkedin",
+                "link": "https://bd.linkedin.com/in/mostafajafirmohiuddin",
+                "name": "Mostafa Jafir's Linkedin"
+            },
+            {
+                "icon": "fi-brands-youtube",
+                "link": "https://www.youtube.com/@khoshrozkitabmahalltd",
+                "name": "Khoshroz Kitab mahal's youtube"
+            }
+        ]
+    }
+}

@@ -1,29 +1,31 @@
-import Slider from "./Slider"
-import useDataFetching from '../Hooks/useDataFetching';
-import Loading from "./Loading";
+// import Slider from "./Slider"
+import { useEffect, useState } from "react";
+import Slider from "./Slider";
 const About = () => {
-    const { data, loading, error } = useDataFetching('data.json');
+    const [data, setData] = useState({});
 
-    if (loading) {
-        return <Loading />;
-    }
+    useEffect(() => {
+        fetch("./about.json")
+            .then((response) => response.json())
+            .then((data) => {
+                setData(data);
+            });
+    }, [])
 
-    if (error) {
-        return <div>Error fetching data: {error.message}</div>;
-    }
 
-    const { about } = data || {};
+    const aboutData = data?.about;
+    const biography = aboutData?.biography;
     return (
         <>
 
             <section className="about">
                 <div className="about__content">
                     <div className="about__image">
-                        <img src={about.aboutImage} alt={about.aboutAlt} />
+                        <img src={aboutData?.aboutImage} alt={aboutData?.aboutAlt} />
                     </div>
                     <div className="about__content--right">
-                        <h3 className="section__title">{about.aboutTitle}</h3>
-                        {about.biography.map((item, index) => (
+                        <h3 className="section__title">{aboutData?.aboutTitle}</h3>
+                        {biography?.map((item, index) => (
                             <p key={index}>{item}</p>
                         ))}
                         <Slider />
