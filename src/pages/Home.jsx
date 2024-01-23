@@ -7,20 +7,33 @@ import Loading from '../components/Loading';
 const Home = () => {
 
     const [data, setData] = useState({});
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("./home.json")
-            .then((response) => response.json())
-            .then((data) => {
-                setData(data);
-            });
-    }, [])
+        const fetchData = () => {
+            fetch("./home.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    setData(data);
+                    setLoading(false);
+                });
+        };
 
-    if (!data) {
+        fetchData();
+
+        const intervalId = setInterval(() => {
+            setLoading(false);
+            clearInterval(intervalId);
+        }, 5000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+
+    if (loading) {
         return <Loading />;
     }
+
     const homeContent = data?.homeContent;
-    console.log(homeContent)
     const seoProps = {
         title: 'Home | Mostafa Mohiuddin',
         description: homeContent?.desc,

@@ -4,24 +4,35 @@ import { SEO } from '../components/SEO';
 
 const About = () => {
     const [data, setData] = useState({});
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("./history.json")
-            .then((response) => response.json())
-            .then((data) => {
-                setData(data);
-                console.log(data)
+        const fetchData = () => {
+            fetch("./history.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    setData(data);
+                    setLoading(false);
+                });
+        };
 
-            });
-    }, [])
-    if (!data) <Loading />
+        fetchData();
+
+        const intervalId = setInterval(() => {
+            setLoading(false);
+            clearInterval(intervalId);
+        }, 5000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+    if (loading) { return <Loading /> }
     const history = data?.history;
     const seoProps = {
         title: 'History of | Mostafa Mohiuddin',
-        // description: homeContent.desc,
-        // name: homeContent.title,
+        description: "It was through Mostafa’s work at his grandfather’s publishing company during the summers that he discovered his love for the paper industry and assumed a full-time job as Deputy Managing Director. Mostafa says he owes most of his business acumen to his grandfather, who gave him his foundational training. This knowledge, paired with his love of nature, inspired Mostafa to open a business with his brother in 2021: Magura Agriculture Park Limited. This organic agriculture farm allows a one-stop solution for people to reach farmers and fresh products with ease.",
+        name: "homeContent.title",
         type: 'website',
-        // image: homeContent.homeImage,
+        image: 'https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/DMD_photo1_hsmn2l.jpg',
         socialLinks: [
             {
                 icon: 'brands-facebook',
