@@ -24,6 +24,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -266,7 +267,14 @@ h1 {
 // Header Styles
 .header {
   background-color: $background;
-
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  .wrapper {
+    padding-top: 0.6vw;
+    padding-bottom: 0.6vw;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -302,7 +310,7 @@ h1 {
 
     a {
       display: block;
-      width: 90px;
+      height: 70px;
 
       @include medium-desktop {
         width: 70px;
@@ -314,6 +322,7 @@ h1 {
 
       img {
         width: 100%;
+        height: 100%;
         object-fit: contain;
       }
     }
@@ -901,27 +910,70 @@ h1 {
 
 .notFound {
   background-color: $whiteBg;
-  &__inner {
-    padding: 5vw 0;
-    text-align: center;
+  height: 100vh;
+  .not-found {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
-  &__image {
-    margin: 0 auto;
-    max-width: 250px;
-    img {
-      width: 100%;
-    }
+  .tipsiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    flex-direction: column;
   }
-  &__content {
-    .danger {
-      color: #c73e1d;
-      font-size: 5.5vw;
-      font-family: $heading-font;
-    }
-    p {
-      font-size: 2.5vw;
-      font-weight: 600;
-    }
+  .tipsiz-body {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  .arm {
+    align-self: flex-end;
+    width: 50px;
+    height: 90px;
+    border-top: 3px solid black;
+  }
+  .left-arm {
+    border-right: 3px solid black;
+    transform: skew(20deg);
+  }
+  .right-arm {
+    border-left: 3px solid black;
+    transform: skew(-20deg);
+  }
+
+  .face {
+    width: 300px;
+    height: 200px;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 15px;
+  }
+  .upper-face {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 80px;
+    margin-left: 80px;
+  }
+  .element {
+    font-size: 60px;
+  }
+  .mouth {
+    width: 20px;
+    height: 10px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border: 3px solid black;
+    border-bottom: 0;
   }
 }
 
