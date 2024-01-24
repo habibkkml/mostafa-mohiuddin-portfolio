@@ -62,7 +62,7 @@ const About = () => {
                         <div className="history__description">
                             <div className="history__description--top">
                                 <h3>{item.designation}</h3>
-                                <h2>{item.name}</h2>
+                                <a href={item.webUrl} target='/_blank'>{item.name}</a>
                                 <p>{item.company}</p>
                             </div>
                             <div className="history__description--main">

@@ -2,6 +2,7 @@
     "history": [
         {
             "name": "Mr. Mohiuddin Ahmed",
+            "webUrl": "https://www.mohiuddinahahmad.com/",
             "designation": "Honorable Chairman",
             "image": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/honorable-founder_joqt8w.jpg",
             "company": "Khoshroz Kitab Mahal and NDC Auto brick",
@@ -14,6 +15,7 @@
         },
         {
             "name": "Mr. Mostafa Jamal Mohiuddin",
+            "webUrl": "https://www.mostafajamal.com/",
             "designation": "Honorable Managing Director",
             "image": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831587/DMD_website/MD-sir_en9ffg.jpg",
             "company": "Khoshroz Kitab Mahal, Magura Group And NDC Auto brick",
@@ -27,6 +29,7 @@
         },
         {
             "name": "Mr. Mostafa Akhter Mohiuddin",
+            "webUrl": "https://www.mostafaakhter.com/",
             "designation": "Chairman",
             "image": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/mostafa-akhter_ylwkbs.jpg",
             "company": "Magura Agriculture Park Ltd and Dream International.",
