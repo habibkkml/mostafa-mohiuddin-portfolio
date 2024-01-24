@@ -777,7 +777,7 @@ h1 {
             padding: 2vw 4vw;
           }
           &--top {
-            h2 {
+            a {
               color: $dark;
             }
           }
@@ -828,7 +828,9 @@ h1 {
         }
       }
 
-      h2 {
+      a {
+        display: block;
+        text-decoration: none;
         font-family: $heading-font;
         color: $white;
         font-size: 3.8vw;

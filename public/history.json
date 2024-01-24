@@ -2,6 +2,7 @@
     "history": [
         {
             "name": "Mr. Mohiuddin Ahmed",
+            "webUrl": "https://www.mohiuddinahahmad.com/",
             "designation": "Honorable Chairman",
             "image": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/honorable-founder_joqt8w.jpg",
             "company": "Khoshroz Kitab Mahal and NDC Auto brick",
@@ -14,9 +15,10 @@
         },
         {
             "name": "Mr. Mostafa Jafir Mohiuddin",
+            "webUrl": "https://www.mostafamohiuddin.com/",
             "designation": "Deputy Managing Director",
             "image": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/DMD_photo1_hsmn2l.jpg",
-            "company": "Khoshroz Kitab Mahal",
+            "company": "Khoshroz Kitab Mahal Ltd.",
             "descTitle": "Background",
             "description": [
                 "Born in Bangladesh and raised in the United States, Mostafa Mohiuddin is a businessman best known for his work in the publication sector. Though he was raised by his parents, Mostafa was most influenced by his grandfather, Mohiuddin Ahmed who was the Chairman and Founder of the publication house Khoshroz Kitab Mahal. Ahmed also founded NDC Auto Brick in an effort to produce pollution-free bricks in Bangladesh.",
@@ -27,6 +29,7 @@
         },
         {
             "name": "Mr. Mostafa Akhter Mohiuddin",
+            "webUrl": "https://www.mostafaakhter.com/",
             "designation": "Chairman",
             "image": "https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/mostafa-akhter_ylwkbs.jpg",
             "company": "Magura Agriculture Park Ltd and Dream International.",
