@@ -65,9 +65,9 @@ const Companies = () => {
                 </div>
                 <div className="company__wrapper">
                     <div className="wrapper">
-                        <div className="row">
+                        <div className="row justify-content-center">
                             {company?.companies?.map((item, index) => (
-                                <div className="col-lg-5 mx-auto" key={index}>
+                                <div className="col-lg-5" key={index}>
                                     <div className="company__container">
                                         <a href={item.url} target="/_blank">
                                             <div className="company__logo">
