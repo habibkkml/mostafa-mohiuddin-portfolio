@@ -6,7 +6,7 @@ const About = () => {
     const [data, setData] = useState({});
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/habibkkml/mostafa-mohiuddin-portfolio/habib/public/about.json")
+        fetch("./about.json")
             .then((response) => response.json())
             .then((data) => {
                 setData(data);

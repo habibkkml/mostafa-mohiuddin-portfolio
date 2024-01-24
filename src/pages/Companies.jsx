@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// import useDataFetching from "../Hooks/useDataFetching";
 import Loading from "../components/Loading";
 import { SEO } from "../components/SEO";
 

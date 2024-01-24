@@ -11,7 +11,7 @@ const Header = () => {
     }, [activeLink]);
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/habibkkml/mostafa-mohiuddin-portfolio/habib/public/common.json")
+        fetch("./common.json")
             .then((response) => response.json())
             .then((data) => {
                 setData(data);
