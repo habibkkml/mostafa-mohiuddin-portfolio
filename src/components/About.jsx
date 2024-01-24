@@ -1,11 +1,12 @@
 // import Slider from "./Slider"
 import { useEffect, useState } from "react";
 import Slider from "./Slider";
+
 const About = () => {
     const [data, setData] = useState({});
 
     useEffect(() => {
-        fetch("./about.json")
+        fetch("https://raw.githubusercontent.com/habibkkml/mostafa-mohiuddin-portfolio/habib/public/about.json")
             .then((response) => response.json())
             .then((data) => {
                 setData(data);
