@@ -511,6 +511,11 @@ h1 {
         height: 3px;
         border-radius: 5px;
         z-index: 1;
+        @include mobile {
+          width: 200px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
   }
@@ -596,7 +601,11 @@ h1 {
         height: 3px;
         border-radius: 5px;
         bottom: -10px;
-
+        @include tablet {
+          width: 250px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
         @include mobile {
           bottom: -10px;
         }
@@ -728,9 +737,7 @@ h1 {
 // History
 .history {
   background-color: $background;
-  @include small-desktop {
-    padding: 0 0 2vw 0;
-  }
+
   &__image {
     width: 40%;
     img {
@@ -806,7 +813,7 @@ h1 {
 
     @include small-desktop {
       width: 100%;
-      padding-bottom: 0;
+      padding-bottom: 2vw;
     }
 
     &--top {
