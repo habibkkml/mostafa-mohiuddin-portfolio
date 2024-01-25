@@ -30,4 +30,4 @@ jobs:
           username: "mohiuddin@mostafamohiuddin.com"
           password: "${{ secrets.FTP_PASSWORD }}"
           protocol: "ftp"
-          local-dir: ./build/
+          local-dir: ./dist/
