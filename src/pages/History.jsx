@@ -28,7 +28,7 @@ const About = () => {
     if (loading) { return <Loading /> }
     const history = data?.history;
     const seoProps = {
-        title: 'History of | Mostafa Mohiuddin',
+        title: 'History of | Mostafa Akhter',
         description: "It was through Mostafa’s work at his grandfather’s publishing company during the summers that he discovered his love for the paper industry and assumed a full-time job as Deputy Managing Director. Mostafa says he owes most of his business acumen to his grandfather, who gave him his foundational training. This knowledge, paired with his love of nature, inspired Mostafa to open a business with his brother in 2021: Magura Agriculture Park Limited. This organic agriculture farm allows a one-stop solution for people to reach farmers and fresh products with ease.",
         name: "homeContent.title",
         type: 'website',
@@ -36,16 +36,8 @@ const About = () => {
         socialLinks: [
             {
                 icon: 'brands-facebook',
-                link: 'https://www.facebook.com/mostafajmohiuddin/',
-            },
-            {
-                icon: 'brands-linkedin',
-                link: 'https://bd.linkedin.com/in/mostafajafirmohiuddin',
-            },
-            {
-                icon: 'brands-youtube',
-                link: 'https://www.youtube.com/@khoshrozkitabmahalltd',
-            },
+                link: 'https://www.facebook.com/profile.php?id=100088074433903',
+            }
         ],
     };
     return (

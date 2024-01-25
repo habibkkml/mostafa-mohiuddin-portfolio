@@ -35,7 +35,7 @@ const Home = () => {
 
     const homeContent = data?.homeContent;
     const seoProps = {
-        title: 'Home | Mostafa Mohiuddin',
+        title: 'Home | Mostafa Akhter',
         description: homeContent?.desc,
         name: homeContent?.title,
         type: 'website',
@@ -43,16 +43,8 @@ const Home = () => {
         socialLinks: [
             {
                 icon: 'brands-facebook',
-                link: 'https://www.facebook.com/mostafajmohiuddin/',
-            },
-            {
-                icon: 'brands-linkedin',
-                link: 'https://bd.linkedin.com/in/mostafajafirmohiuddin',
-            },
-            {
-                icon: 'brands-youtube',
-                link: 'https://www.youtube.com/@khoshrozkitabmahalltd',
-            },
+                link: 'https://www.facebook.com/profile.php?id=100088074433903',
+            }
         ],
     };
     return (

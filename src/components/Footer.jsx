@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer className="footer">
-            <p>&copy; all rights reserved 2024 Mostafa Jamal Mohiuddin. Developed and Maintained by KKML Developers</p>
+            <p>&copy; all rights reserved 2024 Mostafa Akhter Mohiuddin. Developed and Maintained by KKML Developers</p>
         </footer>
     );
 }
