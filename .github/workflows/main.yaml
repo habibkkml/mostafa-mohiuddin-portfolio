@@ -31,3 +31,9 @@ jobs:
         password: ${{ secrets.GIT_CPANEL_REACT_PWD }}
         protocol: ${{ secrets.GIT_CPANEL_REACT_PROTOCOL }}
         local-dir: ./build/
+- name: Debug Secrets
+  run: |
+    echo "Server: ${{ secrets.GIT_CPANEL_REACT_SERVER }}"
+    echo "Username: ${{ secrets.GIT_CPANEL_REACT_USER }}"
+    echo "Password: ${{ secrets.GIT_CPANEL_REACT_PWD }}"
+    echo "Protocol: ${{ secrets.GIT_CPANEL_REACT_PROTOCOL }}"
