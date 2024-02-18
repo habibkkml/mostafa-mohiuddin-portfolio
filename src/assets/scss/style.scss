@@ -24,6 +24,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -266,7 +267,14 @@ h1 {
 // Header Styles
 .header {
   background-color: $background;
-
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  .wrapper {
+    padding-top: 0.6vw;
+    padding-bottom: 0.6vw;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -302,7 +310,7 @@ h1 {
 
     a {
       display: block;
-      width: 90px;
+      height: 70px;
 
       @include medium-desktop {
         width: 70px;
@@ -314,6 +322,7 @@ h1 {
 
       img {
         width: 100%;
+        height: 100%;
         object-fit: contain;
       }
     }
@@ -627,16 +636,15 @@ h1 {
   }
 
   .swiper-slide {
-    height: 120px;
     a {
       display: block;
-      height: 100%;
+      height: 105px;
     }
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      object-position: center;
+      object-position: bottom center;
     }
   }
 
@@ -720,7 +728,7 @@ h1 {
 // History
 .history {
   background-color: $background;
-  padding: 0 0 2vw 0;
+
   &__image {
     width: 40%;
     img {
@@ -768,7 +776,7 @@ h1 {
             padding: 2vw 4vw;
           }
           &--top {
-            h2 {
+            a {
               color: $dark;
             }
           }
@@ -789,13 +797,14 @@ h1 {
   &__description {
     width: 60%;
     align-self: center;
-    padding: 2vw 0 2vw 2vw;
+    padding: 2vw;
     @include medium-desktop {
       padding: 2vw 4vw;
     }
 
     @include small-desktop {
       width: 100%;
+      padding-bottom: 2vw;
     }
 
     &--top {
@@ -819,7 +828,9 @@ h1 {
         }
       }
 
-      h2 {
+      a {
+        display: block;
+        text-decoration: none;
         font-family: $heading-font;
         color: $white;
         font-size: 3.8vw;
@@ -895,32 +906,6 @@ h1 {
           font-size: 14px;
         }
       }
-    }
-  }
-}
-
-.notFound {
-  background-color: $whiteBg;
-  &__inner {
-    padding: 5vw 0;
-    text-align: center;
-  }
-  &__image {
-    margin: 0 auto;
-    max-width: 250px;
-    img {
-      width: 100%;
-    }
-  }
-  &__content {
-    .danger {
-      color: #c73e1d;
-      font-size: 5.5vw;
-      font-family: $heading-font;
-    }
-    p {
-      font-size: 2.5vw;
-      font-weight: 600;
     }
   }
 }
@@ -1025,7 +1010,7 @@ h1 {
   background-color: $background;
   color: $white;
   padding: 20px 15px;
-  border-top: 1px solid $whiteBg;
+  border-top: 1px solid #373737;
   p {
     margin: 0;
     font-size: 18px;

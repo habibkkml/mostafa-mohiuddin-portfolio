@@ -18,7 +18,7 @@ const Slider = () => {
     const brands = data?.brands;
     return (
         <Swiper
-            spaceBetween={0}
+            spaceBetween={10}
             freeMode={true}
             loop={true}
             speed={2000}
@@ -36,9 +36,13 @@ const Slider = () => {
                     slidesPerView: 2,
                     spaceBetween: 20,
                 },
-                768: {
+                1200: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1201: {
                     slidesPerView: 3,
-                    spaceBetween: 40,
+                    spaceBetween: 20,
                 },
 
             }}
