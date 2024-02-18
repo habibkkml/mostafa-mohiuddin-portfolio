@@ -74,7 +74,7 @@ const Companies = () => {
                                                 <img src={item.logo} alt={item.alt} />
                                             </div>
                                             <div className="company__text">
-                                                <p>{item.alt}</p>
+                                                <p>{item.text}</p>
                                             </div>
                                         </a>
                                     </div>
