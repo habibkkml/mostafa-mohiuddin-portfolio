@@ -27,30 +27,19 @@ const Companies = () => {
     }, []);
     if (loading) { return <Loading /> }
     const { company } = data;
-    const seoProps = {
-        title: 'Companies | Mostafa Mohiuddin',
-        description: "It was through Mostafa’s work at his grandfather’s publishing company during the summers that he discovered his love for the paper industry and assumed a full-time job as Deputy Managing Director. Mostafa says he owes most of his business acumen to his grandfather, who gave him his foundational training. This knowledge, paired with his love of nature, inspired Mostafa to open a business with his brother in 2021: Magura Agriculture Park Limited. This organic agriculture farm allows a one-stop solution for people to reach farmers and fresh products with ease.",
-        name: "homeContent.title",
-        type: 'website',
-        image: 'https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/DMD_photo1_hsmn2l.jpg',
-        socialLinks: [
-            {
-                icon: 'brands-facebook',
-                link: 'https://www.facebook.com/mostafajmohiuddin/',
-            },
-            {
-                icon: 'brands-linkedin',
-                link: 'https://bd.linkedin.com/in/mostafajafirmohiuddin',
-            },
-            {
-                icon: 'brands-youtube',
-                link: 'https://www.youtube.com/@khoshrozkitabmahalltd',
-            },
-        ],
-    };
     return (
         <>
-            <SEO {...seoProps} />
+            <SEO title="Companies | Mostafa Mohiuddin"
+                description="Leading family business specializing in publications exports, with multiple companies including Khoshroz Kitab Mahal, National Development Company Limited, Jatiya Mudran Limited, Magura Agriculture Park Limited, E-Stylze Fashion Limited, and Dream International Limited"
+                keywords="Khoshroz Group, Khoshroz Kitab Mahal, National Development Company Limited, Jatiya Mudran, Magura Agriculture Park Limited, E-Stylze fashion e-commerce, Dream International Limited, company group, conglomerate, business group, diversified company, investment company, corporate group, Khoshroz, Kitab Mahal, development company, agriculture park, fashion e-commerce, international company, business concerns, company portfolio, group of companies, enterprise group, investment group, corporate entity, business conglomerate, company holdings, business portfolio, company subsidiaries, Khoshroz Group, benevolent services, profit-making, society, multi-faceted entity, food sector, clothing sector, housing sector, education sector, healthcare sector, Bangladeshi people, economic development, industries, plants, future of the nation, business operations, management, diversification, opportunities, dedication, hard work, subsidiaries, economic development, industries, plants, activities, sectors, lifestyle enhancement, Bangladesh, Khoshroz Group concerns"
+                author="Khoshroz Group Developers"
+                ogTitle="Khoshroz Group of Company"
+                ogDescription="Leading family business specializing in publications exports, with multiple companies including Khoshroz Kitab Mahal, National Development Company Limited, Jatiya Mudran Limited, Magura Agriculture Park Limited, E-Stylze Fashion Limited, and Dream International Limited"
+                ogUrl="https://www.mostafamohiuddin.com"
+                ogImage="https://res.cloudinary.com/dfaw271y6/image/upload/v1706095346/logos/b1z8dxf7cvrkqugkr5io.png"
+                twitterTitle="Khoshroz Group of Company"
+                twitterDescription="Leading family business specializing in publications exports, with multiple companies including Khoshroz Kitab Mahal, National Development Company Limited, Jatiya Mudran Limited, Magura Agriculture Park Limited, E-Stylze Fashion Limited, and Dream International Limited"
+                twitterImage="https://res.cloudinary.com/dfaw271y6/image/upload/v1706095346/logos/b1z8dxf7cvrkqugkr5io.png" />
             <section className="company">
                 <div className="wrapper">
                     <div className="row">

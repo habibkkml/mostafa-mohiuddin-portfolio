@@ -27,30 +27,20 @@ const About = () => {
     }, []);
     if (loading) { return <Loading /> }
     const history = data?.history;
-    const seoProps = {
-        title: 'History of | Mostafa Mohiuddin',
-        description: "It was through Mostafa’s work at his grandfather’s publishing company during the summers that he discovered his love for the paper industry and assumed a full-time job as Deputy Managing Director. Mostafa says he owes most of his business acumen to his grandfather, who gave him his foundational training. This knowledge, paired with his love of nature, inspired Mostafa to open a business with his brother in 2021: Magura Agriculture Park Limited. This organic agriculture farm allows a one-stop solution for people to reach farmers and fresh products with ease.",
-        name: "homeContent.title",
-        type: 'website',
-        image: 'https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/DMD_photo1_hsmn2l.jpg',
-        socialLinks: [
-            {
-                icon: 'brands-facebook',
-                link: 'https://www.facebook.com/mostafajmohiuddin/',
-            },
-            {
-                icon: 'brands-linkedin',
-                link: 'https://bd.linkedin.com/in/mostafajafirmohiuddin',
-            },
-            {
-                icon: 'brands-youtube',
-                link: 'https://www.youtube.com/@khoshrozkitabmahalltd',
-            },
-        ],
-    };
+
     return (
         <>
-            <SEO {...seoProps} />
+            <SEO title="History | Mostafa Mohiuddin"
+                description="Deputy Managing Director of Khoshroz Kitab Mahal. It was through Mostafa’s work at his grandfather’s publishing company during the summers that he discovered his love for the paper industry and assumed a full-time job as Deputy Managing Director. Mostafa says he owes most of his business acumen to his grandfather, who gave him his foundational training. This knowledge, paired with his love of nature, inspired Mostafa to open a business with his brother in 2021: Magura Agriculture Park Limited. This organic agriculture farm allows a one-stop solution for people to reach farmers and fresh products with ease."
+                keywords="History of Mostafa Mohiuddin, How mostafa's journey on publication sector, Khoshroz Kitab Mahal, NDC Auto Brick, Khaohroz Advanced Technology Ltd, IT industry, software development, website development, networking services, Bangladesh businessman, publication house, pollution-free bricks, business expansion, smarter IT services, hardworking entrepreneur, motivated businessman, operational capacity, Bangladesh technology, IT solutions, technology development, entrepreneurship, business growth, software solutions, IT consulting, technology innovation, business leadership, startup company, digital transformation, IT infrastructure, business strategy"
+                author="Khoshroz Group Developers"
+                ogTitle="Mostafa Mohiuddin"
+                ogDescription="Deputy Managing Director of Khoshroz Kitab Mahal. It was through Mostafa’s work at his grandfather’s publishing company during the summers that he discovered his love for the paper industry and assumed a full-time job as Deputy Managing Director. Mostafa says he owes most of his business acumen to his grandfather, who gave him his foundational training. This knowledge, paired with his love of nature, inspired Mostafa to open a business with his brother in 2021: Magura Agriculture Park Limited. This organic agriculture farm allows a one-stop solution for people to reach farmers and fresh products with ease."
+                ogUrl="https://www.mostafamohiuddin.com"
+                ogImage="https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/DMD_photo1_hsmn2l.jpg"
+                twitterTitle="Mostafa Mohiuddin"
+                twitterDescription="Deputy Managing Director of Khoshroz Kitab Mahal. It was through Mostafa’s work at his grandfather’s publishing company during the summers that he discovered his love for the paper industry and assumed a full-time job as Deputy Managing Director. Mostafa says he owes most of his business acumen to his grandfather, who gave him his foundational training. This knowledge, paired with his love of nature, inspired Mostafa to open a business with his brother in 2021: Magura Agriculture Park Limited. This organic agriculture farm allows a one-stop solution for people to reach farmers and fresh products with ease."
+                twitterImage="https://res.cloudinary.com/dfaw271y6/image/upload/v1705831588/DMD_website/DMD_photo1_hsmn2l.jpg" />
             <section className="history">
                 {history?.map((item, index) => (
 

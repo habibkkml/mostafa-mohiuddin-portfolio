@@ -2,39 +2,20 @@
 
 import { Helmet } from "react-helmet-async";
 
-export const SEO = ({ title, description, name, type, image, socialLinks }) => {
+export const SEO = ({ title, description, keywords, author, ogTitle, ogDescription, ogUrl, ogImage, twitterTitle, twitterDescription, twitterImage }) => {
     return (
         <Helmet>
-            {/* Standard metadata tags */}
             <title>{title}</title>
             <meta name="description" content={description} />
-            {/* End standard metadata tags */}
-
-            {/* Facebook tags */}
-            <meta property="og:type" content={type} />
-            <meta property="og:title" content={title} />
-            <meta property="og:description" content={description} />
-            {image && <meta property="og:image" content={image} />}
-            {/* End Facebook tags */}
-
-            {/* Twitter tags */}
-            <meta name="twitter:creator" content={name} />
-            <meta name="twitter:card" content={type} />
-            <meta name="twitter:title" content={title} />
-            <meta name="twitter:description" content={description} />
-            {image && <meta name="twitter:image" content={image} />}
-            {/* End Twitter tags */}
-
-            {/* Social media links */}
-            {socialLinks &&
-                socialLinks.map((social, index) => (
-                    <meta
-                        key={index}
-                        property={`og:${social.icon}`}
-                        content={social.link}
-                    />
-                ))}
-            {/* End Social media links */}
+            <meta name="keywords" content={keywords} />
+            <meta name="author" content={author} />
+            <meta property="og:title" content={ogTitle} />
+            <meta property="og:description" content={ogDescription} />
+            <meta property="og:url" content={ogUrl} />
+            <meta property="og:image" content={ogImage} />
+            <meta name="twitter:title" content={twitterTitle} />
+            <meta name="twitter:description" content={twitterDescription} />
+            <meta name="twitter:image" content={twitterImage} />
         </Helmet>
     );
 };
